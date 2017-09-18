@@ -1,9 +1,9 @@
 ![Skylab Coders Academy](http://www.skylabcoders.com/images/403/default.png "Skylab Coders Academy")
 
-Skylab FullStack WebDevelopment Bootcamp 201709
+Skylab FullStack WebDevelopment Bootcamp 201709 😘
 ===============================================
-
-# Basic Tools
+# HELLO CLASS!!!
+# Basic Tools 📖
 
 ## Console
 
