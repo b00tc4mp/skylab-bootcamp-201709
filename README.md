@@ -1,9 +1,9 @@
 ![Skylab Coders Academy](http://www.skylabcoders.com/images/403/default.png "Skylab Coders Academy")
 
-Skylab FullStack WebDevelopment Bootcamp 201709 😘
+Skylab FullStack WebDevelopment Bootcamp 201709
 ===============================================
-# HELLO CLASS!!!
-# Basic Tools 📖
+
+# Basic Tools
 
 ## Console
 
@@ -203,4 +203,51 @@ __double underscores__
 
 ### Comments
 
+```html
 <!-- this is a comment -->
+```
+
+## Git
+
+* Init a bare repo ("remote")
+
+```bash
+$ git init --bare
+```
+
+* Init a local repo (to be connected to remote repo)
+
+```bash
+$ git init
+```
+
+* Add file or directory to stage
+
+```bash
+$ git add <file-or-directory>
+```
+
+* Remove file or directory from stage
+
+```bash
+$ git rm --cached <file-or-directory>
+```
+
+* Commit a the changes in stage
+
+```bash
+$ git commit -m '<a short message that describes  the commit>'
+```
+
+* Push changes from local to remote repo
+
+```bash
+$ git push
+```
+
+* Pull changes from remote to local repo
+
+```bash
+$ git pull
+```
+
