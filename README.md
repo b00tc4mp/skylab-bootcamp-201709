@@ -291,3 +291,6 @@ github.com/gemmacn
 
 sol.noeli.lopez@gmail.com
 github.com/Sol-22
+
+enric.bertran.marti@gmail.com
+github.com/ebertran
