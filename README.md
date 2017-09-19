@@ -256,21 +256,34 @@ $ git pull
 
 # Staff
 
+alejandro.delgado@skylabcoders.com
+github.com/agandia9
+
 pau.sarobe@gmail.com
-https://github.com/pausarobe
+github.com/pausarobe
+
 kevinros1992@hotmail.com
 github.com/kevinrosmusic
+
 manuelbarzi@gmail.com
 github.com/manuelbarzi
+
 github.com/marcrg
+marcrg@gmail.com
+
 ricardo.martinez.monje@gmail.com
+
 github.com/mtzfactory
 sergipicazo14@gmail.com
+
 github.com/Sergi145
 ricardo.martinez.monje@gmail.com
+
 github.com/mtzfactory
 escolano_garnica@hotmail.com
+
 github.com/micheloncio
+
 codeshaktiman@gmail.com
 github.com/codeshakti
 gmm.casanovas@gmail.com
