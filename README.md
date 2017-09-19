@@ -254,6 +254,9 @@ $ git pull
 
 [calendar]: images/calendar.jpg
 
+<<<<<<< HEAD
+
+=======
 # Staff
 
 mangione.mkt@gmail.com
@@ -285,3 +288,11 @@ github.com/micheloncio
 
 codeshaktiman@gmail.com
 github.com/codeshakti
+
+[sol.noeli.lopez@gmail.com](https://github.com/Sol-22 "Sol")
+
+gmm.casanovas@gmail.com
+github.com/gemmacn
+
+mangione.mkt@gmail.com
+github.com/mangione77
