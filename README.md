@@ -254,3 +254,9 @@ $ git pull
 ```
 
 [calendar]: images/calendar.jpg
+
+# Staff
+
+manuelbarzi@gmail.com
+github.com/manuelbarzi
+
