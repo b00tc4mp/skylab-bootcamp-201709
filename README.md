@@ -256,6 +256,8 @@ $ git pull
 
 # Staff
 
+[Manuel Barzi](staff/manuelbarzi)
+
 mangione.mkt@gmail.com
 github.com/mangione77
 
@@ -267,9 +269,6 @@ github.com/pausarobe
 
 kevinros1992@hotmail.com
 github.com/kevinrosmusic
-
-manuelbarzi@gmail.com
-github.com/manuelbarzi
 
 marcrg@gmail.com
 github.com/marcrg
