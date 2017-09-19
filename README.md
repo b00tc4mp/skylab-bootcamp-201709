@@ -254,7 +254,6 @@ $ git pull
 
 [calendar]: images/calendar.jpg
 
-
 # Staff
 
 pau.sarobe@gmail.com
@@ -266,11 +265,11 @@ github.com/kevinrosmusic
 manuelbarzi@gmail.com
 github.com/manuelbarzi
 
+sergipicazo14@gmail.com
+github.com/Sergi145
+
 ricardo.martinez.monje@gmail.com
 github.com/mtzfactory
-
-gmm.casanovas@gmail.com
-github.com/gemmacn
 
 escolano_garnica@hotmail.com
 github.com/micheloncio
