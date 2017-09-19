@@ -260,3 +260,5 @@ $ git pull
 manuelbarzi@gmail.com
 github.com/manuelbarzi
 
+ricardo.martinez.monje@gmail.com
+github.com/mtzfactory
