@@ -3,8 +3,8 @@ Bash
 
 ### Emulators for Windows
 
-[Commander](http://cmder.net)
-[Cygwin](http://cygwin.com)
+- [Commander](http://cmder.net)
+- [Cygwin](http://cygwin.com)
 
 ### How-to's
 
