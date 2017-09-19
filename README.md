@@ -13,4 +13,6 @@ Skylab FullStack WebDevelopment Bootcamp 201709
 
 ## [Git](topics/git)
 
+# JavaScript
+
 # [Staff](staff)
