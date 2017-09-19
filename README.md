@@ -254,3 +254,9 @@ $ git pull
 ```
 
 [calendar]: images/calendar.jpg
+
+#Staff
+
+kevinros1992@hotmail.com
+github.com/kevinrosmusic
+
