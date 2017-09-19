@@ -255,5 +255,14 @@ $ git pull
 
 [calendar]: images/calendar.jpg
 
+# Staff
+
+manuelbarzi@gmail.com
+github.com/manuelbarzi
+
+ricardo.martinez.monje@gmail.com
+github.com/mtzfactory
+
 escolano_garnica@hotmail.com
 github.com/micheloncio
+
