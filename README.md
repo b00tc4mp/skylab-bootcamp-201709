@@ -260,3 +260,6 @@ $ git pull
 manuelbarzi@gmail.com
 github.com/manuelbarzi
 
+
+sergipicazo14@gmail.com
+github.com/Sergi145
