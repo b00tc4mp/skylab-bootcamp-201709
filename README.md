@@ -3,6 +3,8 @@
 Skylab FullStack WebDevelopment Bootcamp 201709
 ===============================================
 
+![calendaro del curso][calendar]
+
 # Basic Tools
 
 ## Console
@@ -251,3 +253,4 @@ $ git push
 $ git pull
 ```
 
+[calendar]: images/calendar.jpg
