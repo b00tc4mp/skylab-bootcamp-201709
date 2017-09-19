@@ -261,7 +261,7 @@ $ git pull
 kevinros1992@hotmail.com
 github.com/kevinrosmusic
 
-=======
+
 # Staff
 
 manuelbarzi@gmail.com
@@ -269,4 +269,9 @@ github.com/manuelbarzi
 
 ricardo.martinez.monje@gmail.com
 github.com/mtzfactory
->>>>>>> 38a9b992f21b9f9d239cda5dfdf9865cbbf9e259
+
+
+escolano_garnica@hotmail.com
+github.com/micheloncio
+
+
