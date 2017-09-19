@@ -255,12 +255,21 @@ $ git pull
 [calendar]: images/calendar.jpg
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Staff
 
 pau.sarobe@gmail.com
 https://github.com/pausarobe
 =======
+=======
+#Staff
+
+kevinros1992@hotmail.com
+github.com/kevinrosmusic
+
+
+>>>>>>> 1e0a49b0c092c3806d842396f92a5e25c7e2e34d
 # Staff
 
 manuelbarzi@gmail.com
@@ -269,7 +278,12 @@ github.com/manuelbarzi
 ricardo.martinez.monje@gmail.com
 github.com/mtzfactory
 
+
 escolano_garnica@hotmail.com
 github.com/micheloncio
 
+<<<<<<< HEAD
 >>>>>>> a1ddc15c7b1ef6e446bcfecd2270e3aeca8e2a20
+=======
+
+>>>>>>> 1e0a49b0c092c3806d842396f92a5e25c7e2e34d
