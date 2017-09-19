@@ -242,7 +242,6 @@ $ git commit -m '<a short message that describes  the commit>'
 ```
 
 * Push changes from local to remote repo
-
 ```bash
 $ git push
 ```
@@ -254,3 +253,9 @@ $ git pull
 ```
 
 [calendar]: images/calendar.jpg
+
+
+# Staff
+
+pau.sarobe@gmail.com
+https://github.com/pausarobe
