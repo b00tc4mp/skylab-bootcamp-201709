@@ -254,7 +254,16 @@ $ git pull
 
 [calendar]: images/calendar.jpg
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 499f2d333792657ef5a46b5d73baca58dce2546e
 # Staff
+
+mangione.mkt@gmail.com
+github.com/mangione77
 
 alejandro.delgado@skylabcoders.com
 github.com/agandia9
@@ -288,3 +297,9 @@ github.com/gemmacn
 
 sol.noeli.lopez@gmail.com
 github.com/Sol-22
+
+gmm.casanovas@gmail.com
+github.com/gemmacn
+
+mangione.mkt@gmail.com
+github.com/mangione77
