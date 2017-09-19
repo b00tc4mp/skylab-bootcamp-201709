@@ -1,3 +1,5 @@
 
-[Pablo Mangione](mangione77)  
+Pablo Mangione
+mangione.mkt@gmail.com
+github.com/mangione77
 
