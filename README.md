@@ -254,3 +254,8 @@ $ git pull
 ```
 
 [calendar]: images/calendar.jpg
+
+### Staff
+
+mangione.mkt@gmail.com
+github.com/mangione77
