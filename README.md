@@ -254,3 +254,5 @@ $ git pull
 ```
 
 [calendar]: images/calendar.jpg
+
+[sol.noeli.lopez@gmail.com](https://github.com/Sol-22 "Sol")
