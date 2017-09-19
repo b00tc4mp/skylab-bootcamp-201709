@@ -262,3 +262,6 @@ github.com/manuelbarzi
 
 ricardo.martinez.monje@gmail.com
 github.com/mtzfactory
+
+gmm.casanovas@gmail.com
+github.com/gemmacn
