@@ -254,3 +254,6 @@ $ git pull
 ```
 
 [calendar]: images/calendar.jpg
+
+escolano_garnica@hotmail.com
+github.com/micheloncio
