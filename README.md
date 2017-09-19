@@ -254,9 +254,6 @@ $ git pull
 
 [calendar]: images/calendar.jpg
 
-<<<<<<< HEAD
-[sol.noeli.lopez@gmail.com](https://github.com/Sol-22 "Sol")
-=======
 # Staff
 
 alejandro.delgado@skylabcoders.com
@@ -286,10 +283,8 @@ github.com/micheloncio
 codeshaktiman@gmail.com
 github.com/codeshakti
 
-<<<<<<< HEAD
->>>>>>> e060f86db6bddb4cbeba68689e1e52e9791447f6
-=======
 gmm.casanovas@gmail.com
 github.com/gemmacn
 
->>>>>>> 05294c62bc425c7b3964dc1d32e6c4effbc797e1
+sol.noeli.lopez@gmail.com
+github.com/Sol-22
