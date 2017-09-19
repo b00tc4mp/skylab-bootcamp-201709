@@ -256,6 +256,9 @@ $ git pull
 
 # Staff
 
+alejandro.delgado@skylabcoders.com
+github.com/agandia9
+
 pau.sarobe@gmail.com
 https://github.com/pausarobe
 
@@ -273,7 +276,6 @@ github.com/mtzfactory
 
 escolano_garnica@hotmail.com
 github.com/micheloncio
-
 
 codeshaktiman@gmail.com
 github.com/codeshakti
