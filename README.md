@@ -242,7 +242,6 @@ $ git commit -m '<a short message that describes  the commit>'
 ```
 
 * Push changes from local to remote repo
-
 ```bash
 $ git push
 ```
@@ -255,7 +254,14 @@ $ git pull
 
 [calendar]: images/calendar.jpg
 
+
 # Staff
+
+pau.sarobe@gmail.com
+https://github.com/pausarobe
+
+kevinros1992@hotmail.com
+github.com/kevinrosmusic
 
 manuelbarzi@gmail.com
 github.com/manuelbarzi
@@ -265,3 +271,7 @@ github.com/mtzfactory
 
 gmm.casanovas@gmail.com
 github.com/gemmacn
+
+escolano_garnica@hotmail.com
+github.com/micheloncio
+
