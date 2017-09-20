@@ -1,5 +1,7 @@
 # Arrays
 
+![from f to a boom!](images/from-f-to-a-boom.jpg)
+
 ```javascript
 function f1() { console.log(1) }
 function f2() { console.log(2) }
