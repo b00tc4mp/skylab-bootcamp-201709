@@ -3,7 +3,7 @@
 FullStack WebDevelopment Bootcamp 201709
 ========================================
 
-![calendaro del curso](images/calendar.jpg)
+![Calendar](images/calendar.jpg)
 
 # Basic Tools
 
