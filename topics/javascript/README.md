@@ -32,3 +32,22 @@ var f = { g: { h: c } };
 f.g.h[0].d[0][0](); // f1 in a from f
 ```
 
+## Array.prototype.reduce()
+
+```javascript
+var cart = [{ item: 'camiseta', price: 10.5 },
+            { item: 'jeans', price: 23.95 },
+            { item: 'zapatos', price: 45 }];
+
+
+cart.reduce(function(accum, v) {
+   console.log(accum, v)
+   return accum + v.price;
+}, cart[0].price); // 89.95 wrong!!!! error!!! this store is stealing my money!!! (richy's store)
+
+cart.reduce(function(accum, v) {
+   console.log(accum, v)
+   return accum + v.price;
+}, 0); // 79.45 correct!!!  
+```
+
