@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="hexadecimal.js"></script>
+    <script type="text/javascript">
+    function testGetRGBReturnsExpectedRGBFromHexInput() {
+        var hex = '#FFFF00';
+        var expected = 'rgb(255,255,0)';
+
+        var res = getRGB(hex);
+
+        if (res === expected)
+            console.log('testGetRGBReturnsExpectedRGBFromHexInput', 'OK');
+        else
+            console.error('testGetRGBReturnsExpectedRGBFromHexInput', 'KO');
+    }
+
+    function testGetRGBReturnsExpectedRGBFromHexInput2() {
+        var hex = '#FF00FF';
+        var expected = 'rgb(255,0,255)';
+
+        var res = getRGB(hex);
+
+        if (res === expected)
+            console.log('testGetRGBReturnsExpectedRGBFromHexInput2', 'OK');
+        else
+            console.error('testGetRGBReturnsExpectedRGBFromHexInput2', 'KO');
+    }
+
+    function testGetRGBReturnsExpectedRGBFromHexInput3() {
+        var hex = '#00FFFF';
+        var expected = 'rgb(0,255,255)';
+
+        var res = getRGB(hex);
+
+        if (res === expected)
+            console.log('testGetRGBReturnsExpectedRGBFromHexInput3', 'OK');
+        else
+            console.error('testGetRGBReturnsExpectedRGBFromHexInput3', 'KO');
+    }
+
+    testGetRGBReturnsExpectedRGBFromHexInput();
+
+    testGetRGBReturnsExpectedRGBFromHexInput2();
+
+    testGetRGBReturnsExpectedRGBFromHexInput3();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

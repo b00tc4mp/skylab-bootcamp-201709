@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/* very nice, but...
+
+		function maxOf3(a, b, c) {
+    		return Math.max(a, b, c);
+		}
+		*/
+
+		function maxOf3(a, b, c) {
+			var res = a >= b ? a : b;
+			return res >= c ? res : c;
+		}
+
+		function testMaxOfABiggerThanBAndCReturnsA() {
+			var a = 10;
+			var b = 5;
+			var c = 7;
+
+			var res = maxOf3(a, b, c);
+
+			if (res === a)
+				console.log('testMaxOfABiggerThanBAndCReturnsA', 'OK');
+			else
+				console.error('testMaxOfABiggerThanBAndCReturnsA', 'KO');
+		}
+
+		function testMaxOfBBiggerThanAAndCReturnsB() {
+			var a = 5;
+			var b = 10;
+			var c = 7;
+
+			var res = maxOf3(a, b, c);
+
+			if (res === b)
+				console.log('testMaxOfBBiggerThanAAndCReturnsB', 'OK');
+			else
+				console.error('testMaxOfBBiggerThanAAndCReturnsB', 'KO');	
+		}
+
+		function testMaxOfCBiggerThanAAndBReturnsC() {
+			var a = 7;
+			var b = 5;
+			var c = 10;
+
+			var res = maxOf3(a, b, c);
+
+			if (res === c)
+				console.log('testMaxOfCBiggerThanAAndBReturnsC', 'OK');
+			else
+				console.error('testMaxOfCBiggerThanAAndBReturnsC', 'KO');
+		}
+
+		testMaxOfABiggerThanBAndCReturnsA();
+
+		testMaxOfBBiggerThanAAndCReturnsB();
+
+		testMaxOfCBiggerThanAAndBReturnsC();
+	</script>
+</head>
+<body>
+
+</body>
+</html>
