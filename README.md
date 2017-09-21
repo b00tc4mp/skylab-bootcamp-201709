@@ -16,3 +16,5 @@ FullStack WebDevelopment Bootcamp 201709
 # JavaScript
 
 # [Staff](staff)
+
+# [White Board](https://docs.google.com/document/d/1sXhC2zKXtrObzM79ByO6NsMDnWDgGQCGQxRmBBcsqYM/edit)
