@@ -41,3 +41,9 @@ $ git push
 ```bash
 $ git pull
 ```
+
+* See repo configuration
+
+```bash
+$ git config --list
+```
