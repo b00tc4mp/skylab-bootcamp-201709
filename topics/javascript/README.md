@@ -51,3 +51,121 @@ cart.reduce(function(accum, v) {
 }, 0); // 79.45 correct!!!  
 ```
 
+# Polyfill
+
+```javascript
+Array.prototype.clone = function() { // provides a new function to arrays
+    return this.slice(0); // creates a copy of the array
+};
+```
+
+# Hoisting
+
+```javascript
+function fun() {
+    x = 1;
+    console.log(x);
+    var x;
+}
+
+fun(); // prints 1 and x only exists inside fun (despite being declared at the end)
+console.log(x); // raises an error, as x is not in a global context.
+```
+
+```javascript
+function fun() {
+    print();
+
+    function print() {
+        console.log('hello world');
+    }
+}
+
+fun(); // prints 'hello world' as print is declared and inside fun
+```
+
+# call vs apply
+
+```javascript
+function salute(name, name2) {
+    console.log(this.hello + ' ' + name + ', ' + name2);
+}
+
+var english = {
+    hello: 'hello'
+};
+
+var german = {
+    hello: 'hallo'
+};
+
+var catalan = {
+    hello: 'hola'
+};
+
+var italian = {
+    hello: 'ciao'
+};
+
+salute.call(english, 'ana', 'max');
+salute.apply(german, ['ana', 'max']);
+salute.call(catalan, 'ana', 'max');
+salute.apply(italian, ['ana', 'max']);
+```
+
+# Prototyping
+
+```javascript
+
+// Animal
+
+function Animal(species, name) {
+    this.species = species;
+    this.name = name;
+}
+
+Animal.prototype.eat = function() {
+    console.log(this.name + ' eating');
+};
+
+Animal.prototype.sleep = function() {
+    console.log(this.name + ' sleeping');
+};
+
+// Lion
+
+function Lion(name) {
+    Animal.call(this, 'feline', name);
+}
+
+Lion.prototype = new Animal();
+
+Lion.prototype.roar = function() {
+    console.log(this.name + ' roaring');
+};
+
+// Human
+
+function Human(name) {
+    Animal.call(this, 'human', name);
+}
+
+Human.prototype = new Animal();
+
+Human.prototype.speak = function() {
+    console.log(this.name + ' speaking');
+};
+
+// examples
+
+var max = new Human('max');
+max.eat();
+max.sleep();
+max.speak();
+
+var cecil = new Lion('cecil');
+cecil.eat();
+cecil.sleep();
+cecil.roar();
+```
+

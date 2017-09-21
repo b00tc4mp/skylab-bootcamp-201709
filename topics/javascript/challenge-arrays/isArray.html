@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="isArray.js"></script>
+    <script type="text/javascript">
+    function testIsArrayFailsWhenInputIsNotArray() {
+        var input = 'hello world';
+
+        var res = isArray(input);
+
+        if (res || typeof res !== 'boolean')
+            console.error('testIsArrayFailsWhenInputIsNotArray', 'KO');
+        else if (res === false)
+            console.log('testIsArrayFailsWhenInputIsNotArray', 'OK');
+    }
+
+    function testIsArraySucceedsWhenInputIsArray() {
+        var input = [1, 2, 3];
+
+        var res = isArray(input);
+
+        if (res === true)
+            console.log('testIsArraySucceedsWhenInputIsArray', 'OK');
+        else
+            console.error('testIsArraySucceedsWhenInputIsArray', 'KO');
+    }
+
+    testIsArrayFailsWhenInputIsNotArray();
+
+    testIsArraySucceedsWhenInputIsArray();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
