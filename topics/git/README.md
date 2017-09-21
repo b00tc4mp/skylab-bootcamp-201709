@@ -102,3 +102,12 @@ $ git checkout -b <branch name>
 $ git branch -d <branch name>
 ```
 
+# References
+
+[git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
+
+[Configuring a remote for a fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
+
+[Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
+
+
