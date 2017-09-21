@@ -47,3 +47,58 @@ $ git pull
 ```bash
 $ git config --list
 ```
+
+* See remotes
+
+```bash
+$ git remote -v
+```
+
+* Add remote
+
+```bash
+$ git remote add upstream <remote url>
+```
+
+* bring changes from remote to local repo
+
+```bash
+$ git fetch upstream
+```
+
+* merge changes from upstream/master to local master (master means branch "master")
+
+```bash
+$ git merge upstream/master
+```
+
+* See differences between working copy with HEAD
+
+```bash
+$ git diff
+```
+
+* See last commits
+
+```bash
+$ git log
+```
+
+* See branches
+
+```bash
+$ git branch
+```
+
+* Create new branch and switch to it
+
+```bash
+$ git checkout -b <branch name>
+```
+
+* Delete a branch
+
+```bash
+$ git branch -d <branch name>
+```
+
