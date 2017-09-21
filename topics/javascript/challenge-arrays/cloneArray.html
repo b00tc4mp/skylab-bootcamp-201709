@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="isArray.js"></script>
+    <script type="text/javascript">
+    function cloneArray(arr) {
+        if (!isArray(arr))
+            throw new Error('input is not an array');
+
+        var cloned = arr.map(function(elem) { 
+        	if (elem instanceof Array) 
+        		return cloneArray(elem);
+
+        	return elem; 
+        });
+
+        return cloned;
+    }
+
+
+    function testCloneArraySucceedsForArrayInput() {
+        var arr = [1, 'a', true, [2, 'b', false, [3, 'c', true, []]]];
+
+        var res = cloneArray(arr);
+
+        function checkResult(_res, _arr) {
+        	if (!isArray(_res) || !isArray(_arr))
+        		throw new Error('one or both inputs is not an array')
+;
+			if (_res === _arr)
+				throw new Error('both inputs are same object');
+
+            for (var i = 0; i < _res.length; i++) {
+                var item = _res[i];
+
+                if (item instanceof Array) {
+                    checkResult(item, _arr[i]);
+                } else if (item !== _arr[i]) {
+                    throw new Error('arrays do not match at index ' + i);
+                }
+            }
+        }
+
+        try {
+            checkResult(res, arr);
+
+            console.log('testCloneArraySucceedsForArrayInput', 'OK');
+        } catch (err) {
+            console.error('testCloneArraySucceedsForArrayInput', 'KO', err);
+        }
+    }
+
+    testCloneArraySucceedsForArrayInput();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
