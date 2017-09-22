@@ -169,3 +169,20 @@ cecil.sleep();
 cecil.roar();
 ```
 
+# var vs scope and block
+
+```javascript
+function fun() {
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
+
+    console.log('here! ' + i); // WARN! i exists here! ... 10!
+}
+
+fun();
+```
+
+# Jasmine
+
+[Introduction](https://jasmine.github.io/2.0/introduction.html)
