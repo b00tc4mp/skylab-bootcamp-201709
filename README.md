@@ -5,16 +5,8 @@ FullStack WebDevelopment Bootcamp 201709
 
 ![Calendar](images/calendar.jpg)
 
-# Basic Tools
-
-## [Bash](topics/bash)
-
-## [Markdown](topics/bash)
-
-## [Git](topics/git)
-
-# JavaScript
-
 # [Staff](staff)
+
+# [Stuff](stuff)
 
 # [White Board](https://docs.google.com/document/d/1sXhC2zKXtrObzM79ByO6NsMDnWDgGQCGQxRmBBcsqYM/edit)
