@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    #yellow-box {
+        background-color: yellow !important;
+    }
+
+    .border-box {
+        border: 1px solid;
+        border-color: red;
+        background-color: lavender;
+    }
+
+    .skyblue-box {
+        background-color: skyblue;
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+
+    div.red-box {
+        background-color: red;
+    }
+
+    p.intro::first-letter {
+        color: #ff0000;
+        font-size: 200%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="yellow-box" class="border-box" style="background-color: orange !important;"></div>
+    <br>
+    <div class="skyblue-box"></div>
+    <br>
+    <div class="skyblue-box border-box"></div>
+    <br>
+    <div class="border-box"></div>
+    <br>
+    <div class="red-box"></div>
+    <br>
+    <section class="red-box">
+    	hello world
+    	<p class="intro">hola mundo</p>
+    	<p>ciao mondo</p>
+    </section>
+</body>
+
+</html>
