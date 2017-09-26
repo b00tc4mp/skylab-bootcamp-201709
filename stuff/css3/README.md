@@ -10,3 +10,10 @@
 
 [CSS Units](https://www.w3schools.com/CSSref/css_units.asp)
 
+[CSS Layout - The position Property](CSS Layout - The position Property)
+
+[Positioning Content](https://learn.shayhowe.com/html-css/positioning-content/)
+
+[Centering in CSS: A Complete Guide](https://css-tricks.com/centering-css-complete-guide/)
+
+[All About Floats](https://css-tricks.com/all-about-floats/)
