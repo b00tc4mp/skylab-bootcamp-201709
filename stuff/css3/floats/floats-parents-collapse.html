@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    	div {
+			min-width: 100px;
+			min-height: 100px;
+			background: gold;
+			margin: 10px;
+		}
+
+		.box-left {
+			float: left;
+			background: plum;
+		}
+
+		.box-right {
+			float: right;
+			background: skyblue;
+		}
+
+		.fix-parent-collapse-1 {
+			clear: both;
+			min-width: 0;
+			min-height: 0; 
+		}
+
+		.fix-parent-collapse-2 {
+			overflow: hidden;
+		}
+
+		.fix-parent-collapse-3:after {
+			content: ".";
+			visibility: hidden;
+			display: block;
+			height: 0;
+			clear: both;
+		}
+    </style>
+</head>
+
+<body>
+	<!-- try one of the fixes at a time -->
+    <div class="fix-parent-collapse-3"><!-- fix 2 or 3 here! -->
+        <div class="box-left"></div>
+        <div class="box-left"></div>
+        <div class="box-right"></div>
+        <div class="box-right"></div>
+        <!-- fix 1 here!
+        <div class="fix-parent-collapse-1"></div>
+    	-->
+    </div>
+</body>
+
+</html>
