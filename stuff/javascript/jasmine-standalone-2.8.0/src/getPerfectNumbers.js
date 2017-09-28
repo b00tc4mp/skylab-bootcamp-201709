@@ -10,6 +10,6 @@
      if (divisors === n) {
          return (n + ' is a perfect number');
      } else {
-         return (n + 'is not a perfect number for a non-perfect number input');
+         return (n + 'is not a perfect number');
      }
  }
