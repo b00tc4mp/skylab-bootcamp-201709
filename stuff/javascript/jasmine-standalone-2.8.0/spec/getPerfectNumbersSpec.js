@@ -13,7 +13,8 @@ describe('getPerfectNumbers', function() {
         
         var res = getPerfectNumbers(n);
 
-        expect(res).toBe(n + ' is not a perfect number');
+        expect(res).toBe(n + 'is not a perfect number for a non-perfect number input');
     });
 
 });
+
