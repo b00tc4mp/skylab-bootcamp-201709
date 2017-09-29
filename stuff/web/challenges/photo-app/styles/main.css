@@ -1,0 +1,16 @@
+.banner {
+  background-image: url(../images/site_showcase_bg.jpg); }
+
+.white {
+  color: white; }
+
+.green {
+  color: #04b486; }
+
+@media (max-width: 768px) {
+  .center-block-xs {
+    display: block;
+    margin-right: auto;
+    margin-left: auto; } }
+
+/*# sourceMappingURL=main.css.map */

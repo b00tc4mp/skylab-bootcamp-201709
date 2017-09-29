@@ -1,0 +1,21 @@
+$green: #04b486;
+
+.banner {
+  background-image: url(../images/site_showcase_bg.jpg);
+}
+
+.white {
+  color: white;
+}
+
+.green {
+  color: $green;
+}
+
+.center-block-xs {
+  @media (max-width: 768px) {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
