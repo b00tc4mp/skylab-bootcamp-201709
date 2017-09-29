@@ -1,0 +1,62 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$box-color: blue;
+$pluma: plum;
+$naranja: orange;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+div {
+  background-color: $box-color;
+}
+
+section {
+  background-color: $box-color;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+
+  p {
+    color: orange;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.box {
+  @include size(100px, 100px);
+  @include border-radius(10px);
+  background-color: $pluma;
+}
+
+.rectangle {
+    @include size(100px, 50px);
+    @include border-radius(5px);
+    background-color: $naranja;
+}

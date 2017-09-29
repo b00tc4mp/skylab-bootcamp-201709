@@ -1,0 +1,104 @@
+$font-stack:    Helvetica, sans-serif;
+$default-color: lightgray;
+
+body {
+  font: 100% $font-stack;
+}
+
+div {
+  background-color: $default-color;
+}
+
+section {
+  background-color: $default-color;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.box {
+  @include size(100px, 100px);
+  @include border-radius(10px);
+  background-color: plum;
+}
+
+.rectangle {
+    @include size(200px, 100px);
+    @include border-radius(5px);
+    background-color: skyblue;
+}
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: $default-color;
+}
+
+.success {
+  @extend .message;
+  color: green;
+}
+
+.error {
+  @extend .message;
+  color: red;
+}
+
+.warning {
+  @extend .message;
+  color: gold;
+}
+
+/* --- */
+
+$viewport-width: 960px;
+
+.container {
+  width: 100%;
+  height: 100px;
+}
+
+article[role="main"] {
+  float: right;
+  width: 600px / $viewport-width * 100%;
+  background-color: skyblue;
+  height: 100%;
+}
+
+aside[role="complementary"] {
+  float: left;
+  width: 300px / $viewport-width * 100%;
+  background-color: plum;
+  height: 100%;
+}
+
+.control {
+  @media (max-width: 500) {
+     display: none;
+   }
+}
