@@ -24,6 +24,8 @@
 
 [Responsive Web Design - The Viewport](https://www.w3schools.com/css/css_rwd_viewport.asp)
 
+[What is initial scale, user-scalable, minimum-scale, maximum-scale attribute in meta tag?](https://stackoverflow.com/questions/22777734/what-is-initial-scale-user-scalable-minimum-scale-maximum-scale-attribute-in)
+
 [Device Pixel Ratio (DPR)](https://stackoverflow.com/questions/8785643/what-exactly-is-device-pixel-ratio)
 
 [Colors](https://coolors.co/app)
@@ -33,5 +35,3 @@
 [Box Sizing](https://css-tricks.com/box-sizing/)
 
 [Responsive Web Design - Grid-View](https://www.w3schools.com/css/css_rwd_grid.asp)
-
-
