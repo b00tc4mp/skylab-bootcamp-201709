@@ -1,4 +1,4 @@
-[Scrum Methodology](https://en.wikipedia.org/wiki/Scrum_(software_development)
+[Scrum Methodology](https://en.wikipedia.org/wiki/Scrum_(software_development))
 
 [Implementing Scrum: The Classic Story of the Scrum Chicken and Pig Cartoon](https://www.implementingscrum.com/2006/09/11/the-classic-story-of-the-pig-and-chicken/)
 
