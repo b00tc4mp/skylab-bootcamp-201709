@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<!--
+  SEE viewport in https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes
+-->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=375, initial-scale=2">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  -->
+  <!--
+      play all this demo with the developer tools, activating the device toolbar. show the rulers and the pixel ratio to see the information of each device being tested.
+
+    	play with "width" from 500 to 2000 and see how the space of the viewport changes in the window
+
+    	play with "initial-scale" from 0.25 to 1.25 and see how the initial zoom of the contents change
+
+    	comment and uncomment the "width: 100%" property in the img selector to see how the images use the full width of the viewport on each case (when playing with "initial-scale" keep this property commented as it will not have sense, because it will always expand the images to fulfill the whole width of the viewport and the initial scale will never be seen)
+    -->
+  <title></title>
+  <style type="text/css">
+    * {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      margin-bottom: 1px;
+      _width: 100%;
+    }
+  </style>
+  <script type="text/javascript">
+    // https://stackoverflow.com/questions/1248081/get-the-browser-viewport-dimensions-with-javascript
+
+    var viewport = {
+      width: Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
+      height: Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    }
+
+    console.log('viewport ' + viewport.width + ' x ' + viewport.height + ', screen ' + screen.width + ' x ' + screen.height + ', DPR ' + window.devicePixelRatio);
+  </script>
+</head>
+
+<body>
+  <!-- play with these images and viewport, setting / unsetting the width: 100% property, and see the results -->
+  <img src="images/320x240.jpg">
+  <!--
+    <img src="images/640x480.jpg">
+    <img src="images/960x720.jpg">
+    <img src="images/1024x768.jpg">
+    <img src="images/1200x900.jpg">
+    <img src="images/1600x1200.jpg">
+    <img src="images/2000x1500.jpg">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec euismod ex. Pellentesque porta, tellus facilisis ultrices fermentum, purus urna pretium ex, quis hendrerit velit leo et ex. Cras in ipsum purus. Curabitur ac sollicitudin nulla, id feugiat
+    lectus. Ut sed neque nec turpis pellentesque accumsan sagittis quis lorem. Mauris sed porttitor nulla, ac mattis urna. In ut eros odio. Ut id libero sapien. Mauris odio enim, suscipit ac tincidunt sollicitudin, vestibulum vitae urna. Etiam massa tellus,
+    laoreet rhoncus rutrum quis, convallis sit amet tortor. Morbi risus arcu, sodales vitae dolor sed, volutpat auctor quam. Sed et metus non risus pretium fringilla ut nec diam. Nunc malesuada nibh laoreet euismod efficitur. In bibendum bibendum laoreet.
+    Fusce imperdiet laoreet mattis. Integer orci mauris, vehicula et tincidunt id, varius in lorem. Suspendisse rhoncus orci hendrerit, tincidunt neque sit amet, faucibus ipsum. Sed vulputate leo id auctor auctor. Cras auctor pulvinar viverra. Quisque
+    eu risus a dui blandit pulvinar quis a libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer iaculis quam sapien, non euismod eros pellentesque id. Mauris turpis nulla, semper quis euismod at, efficitur ut odio. Proin eleifend
+    sapien vitae velit rutrum placerat. Cras gravida convallis arcu eu imperdiet. Nullam condimentum nisl non purus convallis, ut consequat eros tempor. Ut elementum accumsan nunc et hendrerit. Pellentesque bibendum purus id lobortis iaculis. Praesent
+    mi felis, dapibus quis turpis consequat, suscipit laoreet risus. Quisque dignissim convallis commodo. Fusce quis risus sed lacus interdum dignissim quis elementum ante. Mauris interdum luctus diam, a bibendum tortor. Morbi mollis purus nibh, ac tristique
+    justo ultrices a. Maecenas at commodo eros, nec interdum sapien. Suspendisse potenti. Maecenas blandit leo rhoncus urna vehicula commodo. Nunc quis pharetra eros, sit amet cursus felis. Nulla nec libero tincidunt, vestibulum ligula convallis, pulvinar
+    diam. Quisque eget lacus tortor. Sed dignissim magna nec vulputate vestibulum. Morbi fermentum tempor laoreet. Quisque suscipit scelerisque tellus ultricies venenatis. Aenean vestibulum commodo dolor, ornare ultrices dui dapibus id. Suspendisse non
+    ex laoreet, fermentum sapien nec, tempor neque. Duis eget felis nisl. Aliquam a mi porttitor, porta dolor vitae, aliquam mauris. Nullam egestas hendrerit risus quis sodales. Maecenas pellentesque magna in risus maximus, sit amet eleifend leo ultricies.
+    Ut eu arcu vehicula risus aliquet dictum in convallis metus. Phasellus eget mi auctor arcu mattis ultrices vitae quis dolor. Nunc et interdum diam, eu sollicitudin diam. Vestibulum id augue a mauris elementum convallis. Nulla vehicula augue sit amet
+    augue consequat porttitor. Ut hendrerit nulla ac leo facilisis, quis semper est venenatis. Donec nec vehicula risus. Maecenas a neque id nisi gravida accumsan sed at dui. Aenean suscipit porta quam. Ut ligula eros, sodales at erat eu, aliquet finibus
+    dolor. Praesent quis sollicitudin nibh, vitae tristique tortor. Etiam imperdiet pellentesque lorem, eget sagittis augue sagittis eget. Maecenas at mi dictum, tristique felis vel, fringilla tellus.
+  </p>
+-->
+</body>
+
+</html>

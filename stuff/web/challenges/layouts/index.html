@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4-layout</title>
+  <style type="text/css">
+    * { font-family: sans-serif; }
+    body { 
+      margin: 0 auto; 
+      width: 75%;
+    }
+    header {
+      background-color: skyblue;
+      max-height: 100px;
+    }
+    header h1 {
+      margin: 0px;
+    }
+    aside {
+      background: violet;
+      float: left;
+      box-sizing: border-box;
+      width: 15%;
+      padding: 8px;
+    }
+    nav {
+      background-color: gold;
+      margin: -8px;
+    }
+    nav ul {
+      padding: 8px;
+      margin: 0px;
+    }
+    nav ul li {
+      list-style-type: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: deeppink;
+    }
+    section {
+      background: yellowgreen;
+      float: right;
+      box-sizing: border-box;
+      width: 85%;
+      padding: 8px;
+    }
+    footer {
+      background: skyblue;
+      padding: 8px;
+      clear: both;
+      vertical-align:middle;
+    }
+    .move-left {
+      float: left;
+    }
+    .move-right {
+      float: right;
+    }
+    .clearfix {
+      clear: both;
+    }
+    img {
+      margin: 0 8px;
+    }
+
+    li {
+      border-bottom: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Exercise 5 - CSS Layout</h1>
+  </header>
+
+  <aside>
+    <nav><ul>
+      <li><a href="http://www.devillecoffee.ca/">DeVille Coffee</a></li>
+      <li><a href="#">Link two</a></li>
+      <li><a href="#">Link three</a></li>
+      <li><a href="#">Link four</a></li>
+    </ul></nav>
+    <div class="nav-message">
+      <p>The above links demonstrate a basic navigational structure using an unordered list styled with CSS. Use this as a starting point and modify the properties to produce your own unique look. If you require flyout menus, create your own using a Spry menu, a menu widget from Adobe's Exchange or a variety of other javascript or CSS solutions.</p>
+      <p>If you would like the navigation along the top, simply move the ul.nav to the top of the page and recreate the styling.</p>
+    </div>
+  </aside>
+
+  <section>
+    <article>
+      <img src="images/taza-cafe-canela-pan.jpg" class="move-left" width="100px">
+        <h1>Instructions</h1>
+        <p>Be aware that the CSS for these layouts is heavily commented. If you do most of your work in Design view, have a peek at the code to get tips on working with the CSS for the fixed layouts. You can remove these comments before you launch your site. To learn more about the techniques used in these CSS Layouts, read this article at Adobe's Developer Center</p>
+        <p><a href="http://www.adobe.com/go/adc_css_layouts">http://www.adobe.com/go/adc_css_layouts</a></p>
+    </article>
+
+    <div style="clear: both;"></div>
+
+    <article>
+      <h2>Clearing Method</h2>
+      <p>Because all the columns are floated, this layout uses a clear:both declaration in the .footer rule. This clearing technique forces the .container to understand where the columns end in order to show any borders or background colors you place on the nutellabun.container. 
+      <img src="images/taza-cafe-canela-pan.jpg" class="move-right" width="300px">
+      If your design requires you to remove the .footer from the .container, you'll need to use a different clearing method. The most reliable will be to add a &lt;br class="clearfloat" /&gt; or &lt;div class="clearfloat"&gt;&lt;/div&gt; after your final floated column (but before the .container closes). This will have the same clearing effect.</p>
+
+      <h3>Logo replacement</h3>
+      <p>An image placeholder was used in this layout in the .header where you'll likely want to place a logo. It is recommended that you remove the placeholder and replace it with your own linked logo.</p>
+
+      <p>Be aware that if you use the Property inspector to navigate to your logo image using the SRC field (instead of removing and replacing the placeholder), you should remove the inline background and display properties. These inline styles are only used to make the logo placeholder show up in browsers for demonstration purposes.</p>
+      <p>To remove the inline styles, make sure your CSS Styles panel is set to Current. Select the image, and in the Properties pane of the CSS Styles panel, right click and delete the display and background properties. (Of course, you can always go directly into the code and delete the inline styles from the image or placeholder there.)</p>
+      <h3>Bacground</h3>
+      <p>By nature, the background color on any div will only show for the length of the content. This means if you're using a background color or border to create the look of a side column, it won't extend all the way to the footer but will stop when the content ends. If the .content div will always contain more content, you can place a border on the .content div to divide it from the column.</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>This .footer contains the declaration position:relative; to give Internet Explorer 6 hasLayout for the .footer and cause it to clear correctly. If you're not required to support IE6, you may remove it.</p>
+  </footer>
+</body>
+</html>
