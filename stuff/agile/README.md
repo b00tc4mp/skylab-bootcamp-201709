@@ -9,3 +9,5 @@
 [Product Owner](https://www.mountaingoatsoftware.com/agile/scrum/roles/product-owner)
 
 ![Agile Software Development Cycle](images/agile-software-development-cycle.png)
+
+![Kanban](images/kanban-board.png)

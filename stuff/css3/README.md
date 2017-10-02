@@ -1,5 +1,7 @@
 # References
 
+[Cascading Style Sheets (CSS)](https://crypto.stanford.edu/cs142/lectures/css.html)
+
 [CSS Pseudo-elements](https://www.w3schools.com/CSS/css_pseudo_elements.asp)
 
 [CSS Specificity: Things You Should Know](https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/)
@@ -35,3 +37,5 @@
 [Box Sizing](https://css-tricks.com/box-sizing/)
 
 [Responsive Web Design - Grid-View](https://www.w3schools.com/css/css_rwd_grid.asp)
+
+[The Difference Between Responsive and Adaptive Design](https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/)
