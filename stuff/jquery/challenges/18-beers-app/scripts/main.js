@@ -7,11 +7,29 @@ function search(event) {
 
     var url = 'https://quiet-inlet-67115.herokuapp.com/api/search/all?q=' + query;
 
-    $.getJSON(url, processResponse);
+    $.getJSON(url, showResults);
 }
 
-function processResponse(response) {
-    console.log(response);
+function showResults(results) {
+    if (results.length) {
+        var ul = $('ul');
 
-    // TODO: show items in ul > li
+        results.forEach(function(item) {
+            ul.append('<li><a href="#" data-id="' + item.id + '">' + item.name + '</a></li>');
+        });
+    }
+}
+
+$(document).on('click', 'a', function() {
+    var id = $(this).data('id');
+
+    var url = 'https://quiet-inlet-67115.herokuapp.com/api/beer/' + id;
+
+    $.getJSON(url, showDetails);
+});
+
+function showDetails(result) {
+    console.log(result);
+
+    // TODO show details someplace in the view!
 }
