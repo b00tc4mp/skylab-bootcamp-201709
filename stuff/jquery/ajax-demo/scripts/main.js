@@ -1,9 +1,8 @@
 var params = {
     url: 'data/employees.json',
-    dataType: 'json',
     success: onSuccess,
     error: onError
-}
+};
 
 $('button').click(function() {
     $.ajax(params);
