@@ -10,10 +10,10 @@ $('button').click(function() {
 
 function onSuccess(results) {
     if(results.length) {
-        var ul = $('ul');
+        var $ul = $('ul');
 
         results.forEach(function(item) {
-            ul.append('<li>' + item.id + ' ' + item.first_name + '</li>');
+            $ul.append('<li>' + item.id + ' ' + item.first_name + '</li>');
         });
     }
 }
