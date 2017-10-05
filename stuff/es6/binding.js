@@ -1,3 +1,11 @@
+function bind(func, obj) {
+    return function () {
+        return func.apply(obj, arguments)
+    }
+}
+
+// 1
+
 var john = {
     name: 'John',
 
@@ -19,12 +27,6 @@ var john = {
 //talk = talk.bind(john)
 //talk()
 
-function bind(func, obj) {
-    return function () {
-        return func.apply(obj, arguments)
-    }
-}
-
 var mary = {
     name: 'Mary'
 }
@@ -42,3 +44,23 @@ var peter = {
 }
 
 peter.talk('ciao')
+
+// 2
+
+var petra = {
+    name: 'Petra',
+
+    do: function (task) {
+        task.apply(this)
+    }
+}
+
+petra.do(function() {
+    console.log('i am ' + this.name)
+})
+
+function help() {
+    console.log('help ' + this.name)
+}
+
+petra.do(bind(help, peter))

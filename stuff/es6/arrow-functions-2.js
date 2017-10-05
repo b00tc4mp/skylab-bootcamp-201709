@@ -4,8 +4,6 @@ function bind(func, obj) {
     }
 }
 
-// 1
-
 var petra = { // worker
     name: 'Petra',
 
@@ -37,11 +35,3 @@ var markus = { // boss of petra
 }
 
 markus.direct()
-
-// 2
-
-function help() {
-    console.log('help ' + this.name)
-}
-
-petra.do(bind(help, markus))
