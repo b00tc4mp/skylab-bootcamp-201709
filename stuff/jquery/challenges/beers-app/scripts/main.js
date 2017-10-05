@@ -1,4 +1,4 @@
-$('form').submit(function(event) {
+$('form').submit(function (event) {
     event.preventDefault();
 
     var query = $(this).find('input').val();
@@ -9,26 +9,24 @@ $('form').submit(function(event) {
 });
 
 function listBeers(beers) {
-    if (beers.length) {
-        var $ul = $('ul');
+    var $ul = $('ul');
 
-        $ul.empty();
+    $ul.empty();
 
-        beers.forEach(function(item) {
-            $ul.append('<li><a href="#" data-id="' + item.id + '">' + item.name + '</a></li>');
-        });
-    }
+    beers.forEach(function (beer) {
+        $ul.append('<li><a href="#" data-id="' + beer.id + '">' + beer.name + '</a></li>');
+    });
 }
 
-$(document).on('click', 'a', function() {
+$(document).on('click', 'a', function () {
     var id = $(this).data('id');
 
     var url = 'https://quiet-inlet-67115.herokuapp.com/api/beer/' + id;
 
-    $.getJSON(url, detailBeer);
+    $.getJSON(url, showBeer);
 });
 
-function detailBeer(beer) {
+function showBeer(beer) {
     $('h1').text(beer.name);
     $('p').text(beer.style.description);
 }
