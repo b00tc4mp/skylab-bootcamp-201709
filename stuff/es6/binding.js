@@ -1,28 +1,44 @@
 var john = {
     name: 'John',
 
-    talk: function(words) {
+    talk: function (words) {
         console.log(this.name + ': ' + words)
+    },
+
+    sum: function (nums) {
+        console.log(this.name + ': ' + nums.reduce(function (accum, num) {
+            return accum + num
+        }))
     }
 }
+//john.talk()
+//john.sum([1, 2, 3])
 
-//john.talk('hi')
+//var talk = john.talk
+//talk()
+//talk = talk.bind(john)
+//talk()
+
+function bind(func, obj) {
+    return function () {
+        return func.apply(obj, arguments)
+    }
+}
 
 var mary = {
     name: 'Mary'
 }
 
-// var maryTalk =  function(words) {
-//     john.talk.call(mary, words)
-// }
+//var talk = bind(john.talk, mary)
+var talk = john.talk.bind(mary)
+var sum = bind(john.sum, mary)
 
-// var maryTalk = john.talk.bind(mary)
-// maryTalk('hola')
+talk('hola mundo')
+sum([3, 4, 5])
 
-function bind(obj, func) {
-    return function () {
-        return func.apply(obj, arguments)
-    }
+var peter = {
+    name: 'Peter',
+    talk: talk
 }
-var maryTalk = bind(mary, john.talk)
-maryTalk('hola')
+
+peter.talk('ciao')
