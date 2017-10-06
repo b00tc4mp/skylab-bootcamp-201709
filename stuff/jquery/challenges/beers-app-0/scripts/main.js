@@ -30,4 +30,5 @@ $(document).on('click', 'a', function() {
 
 function detailBeer(beer) {
     $('h1').text(beer.name);
+    $('p').text(beer.style.description);
 }

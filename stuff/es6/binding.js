@@ -1,28 +1,66 @@
-var john = {
-    name: 'John',
-
-    talk: function(words) {
-        console.log(this.name + ': ' + words)
+function bind(func, obj) {
+    return function () {
+        return func.apply(obj, arguments)
     }
 }
 
-//john.talk('hi')
+// 1
+
+var john = {
+    name: 'John',
+
+    talk: function (words) {
+        console.log(this.name + ': ' + words)
+    },
+
+    sum: function (nums) {
+        console.log(this.name + ': ' + nums.reduce(function (accum, num) {
+            return accum + num
+        }))
+    }
+}
+//john.talk()
+//john.sum([1, 2, 3])
+
+//var talk = john.talk
+//talk()
+//talk = talk.bind(john)
+//talk()
 
 var mary = {
     name: 'Mary'
 }
 
-// var maryTalk =  function(words) {
-//     john.talk.call(mary, words)
-// }
+//var talk = bind(john.talk, mary)
+var talk = john.talk.bind(mary)
+var sum = bind(john.sum, mary)
 
-// var maryTalk = john.talk.bind(mary)
-// maryTalk('hola')
+talk('hola mundo')
+sum([3, 4, 5])
 
-function bind(obj, func) {
-    return function () {
-        return func.apply(obj, arguments)
+var peter = {
+    name: 'Peter',
+    talk: talk
+}
+
+peter.talk('ciao')
+
+// 2
+
+var petra = {
+    name: 'Petra',
+
+    do: function (task) {
+        task.apply(this)
     }
 }
-var maryTalk = bind(mary, john.talk)
-maryTalk('hola')
+
+petra.do(function() {
+    console.log('i am ' + this.name)
+})
+
+function help() {
+    console.log('help ' + this.name)
+}
+
+petra.do(bind(help, peter))

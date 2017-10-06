@@ -14,7 +14,7 @@ var $tracksList = $('#tracks ul');
 var $trackTitle = $('#track h1');
 var $trackPlayer = $('#player');
 
-var token = 'BQDEmftEiY0I67dzPdA2HJRTAQJ-q4M9rT1MVChMKSkGcR0wZRvixJS1RqOlR7raxXsrCyQC-LBCUdcpFlEj47pU1l081-oP5we9joymv3ChJnwINkD2fLJnC0EsKhAlMiPP9rV7RgmS';
+var token = 'BQAYrSxa2y6b5pqOZIq9o1RBEtKMsDWftJfGJz1CUcgVUEao49PbIFyiEblin3frHfdRQBetuiqOj5uJWK3z1Q';
 
 $('form').submit(function (event) {
     event.preventDefault();
