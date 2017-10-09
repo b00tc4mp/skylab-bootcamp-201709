@@ -1,4 +1,4 @@
-const spotifyApi = new SpotifyApi('BQAVJWzsiVHf5fx8n-a0xcBJtvo5Ul2d7NrRLoX5W4vmhD6eEBxaEkkKdAZoQmfYzO2if24_0t5H_s0DrIut2Q')
+const spotifyApi = new SpotifyApi('BQB_XNYVWgX5hn9CGaARMWmnit1xz9WcgBKwZiN_RbXTY6TaYsR5BMiQfRcSmFXAmPaZ9D3kziW8va1vlgEOrA')
 
 function testSearchArtistsReturnsResultsOnExistingArtist() {
     spotifyApi.searchArtists('madonna')

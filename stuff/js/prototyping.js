@@ -87,12 +87,12 @@ var cecil = new Lion('Cecil');
 
 function feedFeline(input) {
     if (input instanceof Feline) {
-        input.eat();
-
         if (input instanceof Cat)
             input.meow();
         else if (input instanceof Lion)
             input.roar();
+
+        input.eat();
     } else
         console.error('this is not a feline!');
 }
