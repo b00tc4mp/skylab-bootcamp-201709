@@ -18,3 +18,17 @@ var p = {
 }
 
 console.log(p)
+
+//
+
+function fun() {
+    return 'Width'
+}
+
+var q = {
+    'theHeight': 20,
+    ['the' + fun()]: 10
+}
+
+console.log(q)
+console.log(q['the' + fun()])

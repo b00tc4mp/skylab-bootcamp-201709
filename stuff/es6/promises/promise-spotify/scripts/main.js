@@ -1,36 +1,38 @@
-var $spinner = $('img')
-$spinner.hide()
+{
+    const $spinner = $('img')
+    $spinner.hide()
 
-const _spotifyApi = new SpotifyApi('BQAYrSxa2y6b5pqOZIq9o1RBEtKMsDWftJfGJz1CUcgVUEao49PbIFyiEblin3frHfdRQBetuiqOj5uJWK3z1Q')
+    const spotifyApi = new SpotifyApi('BQB_XNYVWgX5hn9CGaARMWmnit1xz9WcgBKwZiN_RbXTY6TaYsR5BMiQfRcSmFXAmPaZ9D3kziW8va1vlgEOrA')
 
-$('button').click(function () {
-    $spinner.show()
+    $('button').click(function () {
+        $spinner.show()
 
-    _spotifyApi.searchArtists('jackson')
-        .then(function(artists) {
-            console.log(artists)
+        spotifyApi.searchArtists('jackson')
+            .then(function (artists) {
+                console.log(artists)
 
-            const artistId = artists[0].id
+                const artistId = artists[0].id
 
-            return artistId
-        })
-        .then(function(artistId) {
-            return _spotifyApi.getAlbums(artistId)
-        })
-        .then(function(albums) {
-            console.log(albums)
+                return artistId
+            })
+            .then(function (artistId) {
+                return spotifyApi.getAlbums(artistId)
+            })
+            .then(function (albums) {
+                console.log(albums)
 
-            const albumId = albums[0].id
+                const albumId = albums[0].id
 
-            return albumId
-        })
-        .then(function(albumId) {
-            return _spotifyApi.getTracks(albumId)
-        })
-        .then(function(tracks) {
-            console.log(tracks)
+                return albumId
+            })
+            .then(function (albumId) {
+                return spotifyApi.getTracks(albumId)
+            })
+            .then(function (tracks) {
+                console.log(tracks)
 
-            $spinner.hide()
-        })
+                $spinner.hide()
+            })
 
-})
+    })
+}
