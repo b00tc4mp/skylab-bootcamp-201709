@@ -3,6 +3,7 @@ import AddTask from './AddTask'
 import Todos from './Todos'
 import Dones from './Dones'
 import './Tasks.css'
+import uuid from 'uuid/v4'
 
 class Tasks extends Component {
     constructor() {
@@ -15,7 +16,7 @@ class Tasks extends Component {
 
     onCreateTask = (text) => {
         const task = {
-            id: Date.now(),
+            id: uuid(),
             text,
             done: false
         }

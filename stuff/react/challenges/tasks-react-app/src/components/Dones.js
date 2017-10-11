@@ -9,7 +9,7 @@ class Dones extends Component {
                 {
                     this.props.tasks.map(task => {
                         if (task.done)
-                            return <li key={task.id}><del>{task.text}</del> <button onClick={() => this.props.onRemoveTask(parseInt(task.id))}>✕</button></li>
+                            return <li key={task.id}><del>{task.text}</del> <button onClick={() => this.props.onRemoveTask(task.id)}>✕</button></li>
                     })
                 }
             </ul>

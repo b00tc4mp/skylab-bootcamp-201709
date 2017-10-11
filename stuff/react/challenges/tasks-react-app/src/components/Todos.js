@@ -9,7 +9,7 @@ class Todos extends Component {
                 {
                     this.props.tasks.map(task => {
                         if (task.done === false)
-                            return <li key={task.id}>{task.text} <button onClick={() => this.props.onMarkTaskDone(parseInt(task.id))}>✓</button></li>
+                            return <li key={task.id}>{task.text} <button onClick={() => this.props.onMarkTaskDone(task.id)}>✓</button></li>
                     })
                 }
             </ul>
