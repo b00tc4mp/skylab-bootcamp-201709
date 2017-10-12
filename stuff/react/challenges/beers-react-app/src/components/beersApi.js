@@ -5,10 +5,16 @@ const beersApi =  {
 
     searchBeers: function (query) {
         return axios.get(this.baseUrl + '/search/all?q=' + query)
+            .then(function({data}) {
+                return data
+            })
     },
 
-    getBeer: function (id, callback) {
+    getBeer: function (id) {
         return axios.get(this.baseUrl + '/beer/' + id)
+            .then(function({data}) {
+                return data
+            })
     }
 }
 
