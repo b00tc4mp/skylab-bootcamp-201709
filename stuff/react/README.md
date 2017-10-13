@@ -17,3 +17,6 @@
 [Understanding React Router 4](https://medium.com/@AkyunaAkish/understanding-react-router-4-df73a66d96c4)
 
 [Programmatically navigate using react router](https://stackoverflow.com/questions/31079081/programmatically-navigate-using-react-router)
+
+[React react-router-dom pass props to component](https://stackoverflow.com/questions/43469071/react-react-router-dom-pass-props-to-component)
+
