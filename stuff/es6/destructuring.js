@@ -46,3 +46,10 @@ var { a: v, b: { x: w } } = p
 // var v = p.a
 // var w = p.b.x
 console.log(w)
+
+// deep matching
+
+const tmp = { op: 1, lhs: { op: 2 }, rhs: 3}
+const { op: a, lhs: { op: b}, rhs: c} = tmp
+console.log(a, b, c) // 1 2 3
+
