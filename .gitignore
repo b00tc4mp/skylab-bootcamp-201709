@@ -3,3 +3,5 @@ lab
 .sass-cache
 .idea
 node_modules
+big-file*.dat
+song*.mp3
