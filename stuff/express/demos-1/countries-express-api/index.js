@@ -7,7 +7,7 @@ const countries = ["Egypt", "South Korea", "Equatorial Guinea", "Nepal", "Equato
 app.get('/country', (req, res) => {
 	console.log(req.query)
 
-	const index = parseInt(req.query.index)
+	const index = req.query.index
 
 	res.json(countries[index])
 })
