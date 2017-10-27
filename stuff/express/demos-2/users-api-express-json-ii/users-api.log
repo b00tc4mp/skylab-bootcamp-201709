@@ -1,0 +1,12 @@
+INFO Fri Oct 27 2017 10:42:21 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.14 to list users
+INFO Fri Oct 27 2017 10:42:24 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.27 to create an user {"username":"asdasdasd"}
+WARN Fri Oct 27 2017 10:42:24 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.27 to create an user {"username":"asdasdasd"}, but wrong information
+INFO Fri Oct 27 2017 10:42:34 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.14 to create an user {"username":"Pau","password":"aaa"}
+DEBUG Fri Oct 27 2017 10:42:34 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.14 to create an user {"username":"Pau","password":"aaa","id":1509093754570} successfully
+INFO Fri Oct 27 2017 10:42:36 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.28 to create an user {"username":"Micheloncio!!!!!!!!!!!","password":"1234232"}
+DEBUG Fri Oct 27 2017 10:42:36 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.28 to create an user {"username":"Micheloncio!!!!!!!!!!!","password":"1234232","id":1509093756609} successfully
+INFO Fri Oct 27 2017 10:42:36 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.28 to update an user {"id":1509093756609,"username":"Micheloncio!"}
+INFO Fri Oct 27 2017 10:42:37 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.28 to list users
+INFO Fri Oct 27 2017 10:42:48 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.54 to list users
+INFO Fri Oct 27 2017 10:42:59 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.27 to create an user {"username":"asdasdasd","password":"123"}
+DEBUG Fri Oct 27 2017 10:42:59 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.27 to create an user {"username":"asdasdasd","password":"123","id":1509093779656} successfully
