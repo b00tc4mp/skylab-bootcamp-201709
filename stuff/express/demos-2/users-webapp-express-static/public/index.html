@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+<h1>Welcome to Users Web-App!</h1>
+
+<h2>Create a User</h2>
+
+<form id="create-user">
+	<input id="username" type="text">
+	<input id="password" type="password">
+	<input type="submit" value="Create">
+</form>
+
+<h2>List Users</h2>
+
+<button id="list-users">List Users</button>
+
+<ul id="users-list"></ul>
+
+<div id="user-edit">
+<h2>Edit User</h2>
+
+<form id="edit-user">
+	<input id="id-edit" type="hidden">
+	<input id="username-edit" type="text">
+	<input id="password-edit" type="password">
+	<input type="submit" value="Update">
+</form>
+
+<h2>Delete User</h2>
+
+<form id="delete-user">
+	<input id="id-delete" type="hidden">
+	<input id="delete-user-button" type="submit" value="Delete">
+</form>
+</div>
+
+<script type="text/javascript" src="vendor/jquery/3.2.1/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>

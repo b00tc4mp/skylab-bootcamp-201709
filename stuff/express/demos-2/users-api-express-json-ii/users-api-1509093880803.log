@@ -1,5 +1,0 @@
-INFO Fri Oct 27 2017 10:45:00 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.14 to create an user {"username":"Pau","password":"aaa"}
-DEBUG Fri Oct 27 2017 10:45:00 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.14 to create an user {"username":"Pau","password":"aaa","id":1509093900656} successfully
-INFO Fri Oct 27 2017 10:45:00 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.14 to retrieve an user 1509093900656
-INFO Fri Oct 27 2017 10:45:00 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.14 to update an user {"id":1509093900656,"username":"Pau-1"}
-INFO Fri Oct 27 2017 10:45:00 GMT+0200 (CEST) Users API: Request from IP ::ffff:192.168.0.14 to delete an user {"id":1509093900656}
