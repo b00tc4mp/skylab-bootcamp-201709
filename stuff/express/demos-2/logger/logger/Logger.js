@@ -4,10 +4,10 @@ class Logger {
 	}
 
 	log(level, message) {
-		this.print(level, `${level} ${new Date()} ${this.name}: ${message}`)
+		this.output(level, `${level} ${new Date()} ${this.name}: ${message}`)
 	}
 
-	print(level, message) {
+	output(level, message) {
 		switch(level) {
 			case 'DEBUG':
 				return console.log(message)

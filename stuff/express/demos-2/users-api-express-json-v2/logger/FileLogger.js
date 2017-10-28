@@ -8,7 +8,7 @@ class FileLogger extends Logger {
 		this.ws = fs.createWriteStream(file)
 	}
 
-	print(level, message) {
+	output(level, message) {
 		this.ws.write(`${message}\n`)
 	}
 }

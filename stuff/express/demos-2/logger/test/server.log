@@ -1,0 +1,5 @@
+DEBUG Sat Oct 28 2017 18:19:22 GMT+0200 (CEST) server: this is a debug
+INFO Sat Oct 28 2017 18:19:22 GMT+0200 (CEST) server: this is a info
+WARN Sat Oct 28 2017 18:19:22 GMT+0200 (CEST) server: this is a warn
+ERROR Sat Oct 28 2017 18:19:22 GMT+0200 (CEST) server: this is a error
+FATAL Sat Oct 28 2017 18:19:22 GMT+0200 (CEST) server: this is a fatal
