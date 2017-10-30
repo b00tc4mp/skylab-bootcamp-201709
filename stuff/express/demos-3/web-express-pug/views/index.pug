@@ -1,14 +1,10 @@
-html
-	head
-		link(rel='stylesheet', href='vendor/bootstrap/3.3.7/css/bootstrap.min.css')
-		link(rel='stylesheet', href='styles/main.css')
-	body
-		.container.text-center.main
-			form(action='/', method='GET')
-				input(type='text', name='query', value= query)
-				input(type='submit', value='Search')
-			ul
-				each beer in beers
-					li= beer.name
-		script(type='text/javascript', src='vendor/jquery/1.12.4/jquery.min.js')
-		script(type='text/javascript', src='vendor/bootstrap/3.3.7/js/bootstrap.min.js')
+extends layout
+
+block content
+	form(action='/', method='GET')
+		input(type='text', name='query', value= query)
+		input(type='submit', value='Search')
+	ul
+		each beer in beers
+			li
+				a(href='/detail/' + beer.id) #{beer.name}

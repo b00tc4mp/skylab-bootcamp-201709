@@ -26,8 +26,6 @@ app.get('/detail/:id', (req, res) => {
 
 	beersApi.getBeer(id)
 		.then(beer => {
-			console.log(beer)
-
 			res.render('detail', { beer })
 		})
 		.catch(console.err)
