@@ -5,9 +5,10 @@ html
 	body
 		.container.text-center.main
 			form(action='/', method='GET')
-				input(type='text', name='query', value='TODO')
+				input(type='text', name='query', value= query)
 				input(type='submit', value='Search')
 			ul
-				li TODO
+				each beer in beers
+					li= beer.name
 		script(type='text/javascript', src='vendor/jquery/1.12.4/jquery.min.js')
 		script(type='text/javascript', src='vendor/bootstrap/3.3.7/js/bootstrap.min.js')

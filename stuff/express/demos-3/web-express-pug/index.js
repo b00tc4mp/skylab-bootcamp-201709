@@ -14,13 +14,23 @@ app.get('/', (req, res) => {
     if (query)
         beersApi.searchBeers(query)
 	        .then(beers => {
-	            console.log(beers)
-
 	            res.render('index', { query, beers })
 	        })
 	        .catch(console.error)
 	else
 		res.render('index', { query: '', beers: [] })
+})
+
+app.get('/detail/:id', (req, res) => {
+	const id = req.params.id
+
+	beersApi.getBeer(id)
+		.then(beer => {
+			console.log(beer)
+
+			res.render('detail', { beer })
+		})
+		.catch(console.err)
 })
 
 console.log('starting server')
