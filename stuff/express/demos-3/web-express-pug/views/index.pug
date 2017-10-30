@@ -1,6 +1,13 @@
 html
 	head
-		title= title
+		link(rel='stylesheet', href='vendor/bootstrap/3.3.7/css/bootstrap.min.css')
+		link(rel='stylesheet', href='styles/main.css')
 	body
-		h1= message
-		// TODO render ul with li for each friend
+		.container.text-center.main
+			form(action='/', method='GET')
+				input(type='text', name='query', value='TODO')
+				input(type='submit', value='Search')
+			ul
+				li TODO
+		script(type='text/javascript', src='vendor/jquery/1.12.4/jquery.min.js')
+		script(type='text/javascript', src='vendor/bootstrap/3.3.7/js/bootstrap.min.js')
