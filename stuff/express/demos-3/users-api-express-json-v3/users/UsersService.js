@@ -37,6 +37,10 @@ class UsersService {
 		return this.users
 	}
 
+	searchUsers(query) {
+		return this.users.filter(user => user.username.includes(query))
+	}
+
 	retrieveUser(id) {
 		if (!id)
 			throw new Error('no user id provided')

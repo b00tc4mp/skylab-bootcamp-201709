@@ -39,15 +39,29 @@ app.post('/users', (req, res) => {
 })
 
 app.get('/users', (req, res) => {
-    const list = usersService.listUsers().map(user => ({ id: user.id, username: user.username }))
+    const query = req.query.query
 
-    log.info(`request from IP ${req.ip} to list all users succeeded`)
+    if (query) {
+        const search = usersService.searchUsers(query).map(user => ({ id: user.id, username: user.username }))
 
-    res.json({
-        status: 'OK',
-        message: 'users listed successfully',
-        data: list
-    })
+        log.info(`request from IP ${req.ip} to search users matching query "${query}" succeeded`)
+
+        res.json({
+            status: 'OK',
+            message: 'users searched successfully',
+            data: search
+        })
+    } else {
+        const list = usersService.listUsers().map(user => ({ id: user.id, username: user.username }))
+
+        log.info(`request from IP ${req.ip} to list all users succeeded`)
+
+        res.json({
+            status: 'OK',
+            message: 'users listed successfully',
+            data: list
+        })
+    }
 })
 
 app.get('/users/:id', (req, res) => {
@@ -63,7 +77,7 @@ app.get('/users/:id', (req, res) => {
             message: 'user retrieved successfully',
             data: { id: user.id, username: user.username }
         })
-    } catch(err) {
+    } catch (err) {
         log.warn(`Request from IP ${req.ip} to retrieve user with ${id}, but ${err.message}`)
 
         return res.json({
@@ -86,7 +100,7 @@ app.put('/users/:id', (req, res) => {
             message: 'user updated successfully',
             data: { id, username }
         })
-    } catch(err) {
+    } catch (err) {
         log.warn(`Request from IP ${req.ip} to update user with ${id}, but ${err.message}`)
 
         return res.json({
@@ -109,7 +123,7 @@ app.delete('/users/:id', (req, res) => {
             message: 'user deleted successfully',
             data: { id: user.id, username: user.username }
         })
-    } catch(err) {
+    } catch (err) {
         log.warn(`Request from IP ${req.ip} to delete user with ${id}, but ${err.message}`)
 
         return res.json({
