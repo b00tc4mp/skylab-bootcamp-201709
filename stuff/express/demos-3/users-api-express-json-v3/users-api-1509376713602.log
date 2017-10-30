@@ -1,0 +1,2 @@
+INFO Mon Oct 30 2017 16:20:07 GMT+0100 (CET) Users API: request from IP ::1 to create a user jack succeeded
+INFO Mon Oct 30 2017 16:20:47 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded

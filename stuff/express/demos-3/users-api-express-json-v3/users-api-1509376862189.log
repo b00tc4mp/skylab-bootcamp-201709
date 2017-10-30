@@ -1,0 +1,9 @@
+INFO Mon Oct 30 2017 16:21:06 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
+INFO Mon Oct 30 2017 16:21:08 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
+INFO Mon Oct 30 2017 16:21:09 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
+INFO Mon Oct 30 2017 16:21:09 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
+WARN Mon Oct 30 2017 16:21:21 GMT+0100 (CET) Users API: Request from IP ::1 to create a user jack, but username "jack" already exists
+WARN Mon Oct 30 2017 16:22:10 GMT+0100 (CET) Users API: Request from IP ::1 to update user with 1509376807130, but no user found with id 1509376807130
+INFO Mon Oct 30 2017 16:22:51 GMT+0100 (CET) Users API: request from IP ::1 to retrieve user with id 1509376807130 succeeded
+INFO Mon Oct 30 2017 16:23:10 GMT+0100 (CET) Users API: request from IP ::1 to delete user with id 1509376807130 succeeded
+INFO Mon Oct 30 2017 16:23:16 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
