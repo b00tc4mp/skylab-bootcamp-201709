@@ -1,0 +1,18 @@
+INFO Tue Oct 31 2017 09:34:36 GMT+0100 (CET) Users API: request from IP ::1 to create a user pepito succeeded
+INFO Tue Oct 31 2017 09:37:40 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
+INFO Tue Oct 31 2017 09:42:50 GMT+0100 (CET) Users API: request from IP ::1 to search users matching query "j" succeeded
+INFO Tue Oct 31 2017 09:43:01 GMT+0100 (CET) Users API: request from IP ::1 to search users matching query "e" succeeded
+INFO Tue Oct 31 2017 09:44:33 GMT+0100 (CET) Users API: request from IP ::1 to retrieve user with id 1509377111032 succeeded
+WARN Tue Oct 31 2017 09:44:50 GMT+0100 (CET) Users API: Request from IP ::1 to retrieve user with 1509377111032_, but no user found with id 1509377111032_
+INFO Tue Oct 31 2017 09:45:08 GMT+0100 (CET) Users API: request from IP ::1 to retrieve user with id 1509377111032 succeeded
+WARN Tue Oct 31 2017 09:45:16 GMT+0100 (CET) Users API: Request from IP ::1 to create a user pepito, but username "pepito" already exists
+WARN Tue Oct 31 2017 09:45:38 GMT+0100 (CET) Users API: Request from IP ::1 to create a user , but username and/or password wrong, {"username":"","password":123}
+WARN Tue Oct 31 2017 09:46:33 GMT+0100 (CET) Users API: Request from IP ::1 to create a user pepito, but username and/or password wrong, {"username":"pepito","password":""}
+WARN Tue Oct 31 2017 09:46:53 GMT+0100 (CET) Users API: Request from IP ::1 to create a user undefined, but username and/or password wrong, {}
+WARN Tue Oct 31 2017 09:49:05 GMT+0100 (CET) Users API: Request from IP ::1 to update user with 1509377111032, but username and/or password wrong, {"username":"markus-2","password":123}
+WARN Tue Oct 31 2017 09:50:21 GMT+0100 (CET) Users API: Request from IP ::1 to update user with 1509377111032, but username and/or password wrong, {"username":"markus-2","password":123}
+WARN Tue Oct 31 2017 09:50:56 GMT+0100 (CET) Users API: Request from IP ::1 to update user with 1509377111032, but username "gemma" already exists
+INFO Tue Oct 31 2017 09:54:19 GMT+0100 (CET) Users API: request from IP ::1 to delete user with id 1509438876730 succeeded
+WARN Tue Oct 31 2017 09:54:25 GMT+0100 (CET) Users API: Request from IP ::1 to delete user with 1509438876730, but no user found with id 1509438876730
+WARN Tue Oct 31 2017 09:54:28 GMT+0100 (CET) Users API: Request from IP ::1 to delete user with 1509438876730, but no user found with id 1509438876730
+INFO Tue Oct 31 2017 09:54:34 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
