@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	p Welcome, #{username}, to Private Page!
+	form(action='/logout', method='get')
+		input(type='hidden', name='sessionId', value=sessionId)
+		input(type='submit', value='Logout')
