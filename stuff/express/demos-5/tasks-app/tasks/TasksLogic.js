@@ -4,7 +4,7 @@ class TasksLogic {
 	}
 
 	addTask(text) {
-		return this.tasksData.create(text)
+		return this.tasksData.create(text, false)
 	}
 
 	getTasks() {

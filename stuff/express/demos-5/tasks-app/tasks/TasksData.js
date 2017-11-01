@@ -11,11 +11,14 @@ class TasksData {
         fs.writeFileSync(this.file, JSON.stringify(this.tasks, null, 4))
     }
 
-    create(text) {
-        if (!text || !text.trim())
-            throw new Error(`text cannot be blank or empty`)
+    create(text, done) {
+        if(!text)
+            throw new Error('no task text provided')
 
-        const task = { id: new Date().getTime(), text }
+        if(typeof done !== 'boolean')
+            throw new Error('task done is not boolean')
+
+        const task = { id: new Date().getTime(), text, done }
 
         this.tasks.push(task)
 
