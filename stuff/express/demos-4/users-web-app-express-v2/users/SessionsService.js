@@ -5,7 +5,7 @@ class SessionsService {
 
 	createSession(userId) {
 		if(!userId)
-			throw new Error('no userId provided')
+			throw new Error('no user id provided')
 
 		const session = { id: new Date().getTime(), userId }
 
@@ -16,7 +16,7 @@ class SessionsService {
 
 	retrieveSession(id) {
 		if (!id)
-			throw new Error('no id provided')
+			throw new Error('no session id provided')
 
 		const [session] = this.sessions.filter(session => session.id == id)
 
@@ -28,7 +28,7 @@ class SessionsService {
 
 	destroySession(id) {
 		if (!id)
-			throw new Error('no user id provided')
+			throw new Error('no session id provided')
 
 		let session
 
