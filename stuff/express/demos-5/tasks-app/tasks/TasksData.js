@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-class TasksService {
+class TasksData {
     constructor() {
         this.file = require('path').join(__dirname, 'tasks.json')
 
@@ -11,7 +11,7 @@ class TasksService {
         fs.writeFileSync(this.file, JSON.stringify(this.tasks, null, 4))
     }
 
-    createTask(text) {
+    create(text) {
         if (!text || !text.trim())
             throw new Error(`text cannot be blank or empty`)
 
@@ -24,11 +24,11 @@ class TasksService {
         return task
     }
 
-    listTasks() {
+    list() {
         return this.tasks
     }
 
-    retrieveTask(id) {
+    retrieve(id) {
         if (!id)
             throw new Error('no task id provided')
 
@@ -40,7 +40,7 @@ class TasksService {
         return task
     }    
 
-    updateTask(id, text, done) {
+    update(id, text, done) {
         if (!id)
             throw new Error('no task id provided')
 
@@ -63,7 +63,7 @@ class TasksService {
         return task
     }
 
-    deleteTask(id) {
+    delete(id) {
         if (!id)
             throw new Error('no task id provided')
 
@@ -87,4 +87,4 @@ class TasksService {
     }
 }
 
-module.exports = TasksService
+module.exports = TasksData

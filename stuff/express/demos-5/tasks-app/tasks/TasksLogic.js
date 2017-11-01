@@ -1,32 +1,32 @@
 class TasksLogic {
 	constructor() {
-		this.tasksService = new (require('./TasksService'))
+		this.tasksData = new (require('./TasksData'))
 	}
 
 	addTask(text) {
-		return this.tasksService.createTask(text)
+		return this.tasksData.create(text)
 	}
 
 	getTasks() {
-		return this.tasksService.listTasks()
+		return this.tasksData.list()
 	}
 
 	markTaskDone(id) {
-		const task = this.tasksService.retrieveTask(id)
+		const task = this.tasksData.retrieve(id)
 
 		if (task.done)
 			throw new Error(`task with id ${id} is already done`)
 
-		return this.tasksService.updateTask(task.id, task.text, true)
+		return this.tasksData.update(task.id, task.text, true)
 	}
 
 	removeDoneTask(id) {
-		const task = this.tasksService.retrieveTask(id)
+		const task = this.tasksData.retrieve(id)
 
 		if (!task.done)
 			throw new Error(`task with id ${id} is not done yet, cannot be removed`)
 
-		return this.tasksService.deleteTask(id)
+		return this.tasksData.delete(id)
 	}
 }
 
