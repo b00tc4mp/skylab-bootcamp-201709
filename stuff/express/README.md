@@ -2,9 +2,7 @@
 
 ## [Routing](https://expressjs.com/en/guide/routing.html)
 
-## API
-
-[Designing a RESTful Web API](https://scotch.io/bar-talk/designing-a-restful-web-api)
+## References
 
 [Build a RESTful API Using Node and Express 4](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
 
