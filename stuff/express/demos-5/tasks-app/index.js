@@ -53,12 +53,12 @@ app.get('/remove-done-task/:id', (req, res) => {
 	res.redirect('/')
 })
 
-console.log(`starting Tasks Web-App on port ${process.env.PORT}`)
+console.log(`starting Tasks App on port ${process.env.PORT}`)
 
-app.listen(process.env.PORT, () => console.log('Tasks Web-App is up'))
+app.listen(process.env.PORT, () => console.log('Tasks App is up'))
 
 process.on('SIGINT', () => {
-	console.log('\nstopping Tasks Web-App...')
+	console.log('\nstopping Tasks App...')
 
 	process.exit()
 })
