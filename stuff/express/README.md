@@ -11,3 +11,6 @@
 [HTML 2 Pug](https://html2pug.herokuapp.com)
 
 ![Layered App Architecture](images/layered-app-architecture.jpg)
+
+![Express with sessions](images/express-sessions.jpg)
+
