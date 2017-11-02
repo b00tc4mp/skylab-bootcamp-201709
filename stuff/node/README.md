@@ -39,7 +39,9 @@
 $ node --version
 ```
 
-## Run a script
+## Running
+
+### From REPL
 
 ```bash
 $ node
@@ -50,7 +52,11 @@ undefined
 >
 (To exit, press ^C again or type .exit)
 >
+```
 
+### A script
+
+```bash
 $ node helloworld
 Hello, World!
 ```
@@ -62,9 +68,9 @@ $ node count-down.js
 1
 ```
 
-## Debug a script
+## Debugging
 
-### $ node debug ...
+### From REPL
 
 ```bash
 $ node debug count-down.js 
@@ -134,7 +140,7 @@ debug> cont
 < 1
 ```
 
-### $ node --inspect --debug-brk
+### With inspect
 
 ```bash
 $ node --inspect --debug-brk count-down.js 
@@ -149,7 +155,7 @@ Debugger attached.
 Waiting for the debugger to disconnect...
 ```
 
-### $ devtool --break ...
+### With [DevTool](https://www.npmjs.com/package/devtool)
 
 ```bash
 $ npm install -g devtool
@@ -157,8 +163,9 @@ $ npm install -g devtool
 $ devtool --break count-down.js
 ```
 
+## Globals
 
-## global {}
+### global {}
 
 ```bash
 $ node
@@ -168,9 +175,9 @@ undefined
 'world'
 ```
 
-## process {}
+### process {}
 
-### .cwd() & __dirname
+#### .cwd() & __dirname
 
 - **.cwd()** is 'The current working directory', returns the path where node command was invoked
 - **__dirname** is 'The directory of this script', references the path where the script file being runned is (is only defined within a running script)
@@ -189,7 +196,7 @@ $ node
 ReferenceError: __dirname is not defined
 ```
 
-### .argv
+#### .argv
 
 ```bash
 $ node process-args.js a b c
@@ -216,7 +223,7 @@ $ node sum-args.js 1.2 3.4
 4.6
 ```
 
-### .env
+#### .env
 
 ```bash
 $ node
@@ -369,12 +376,12 @@ A running program is always represented through some space allocated in memory. 
 - Stack: contains all value types (primitives like integer or Boolean) with pointers referencing objects on the heap and pointers defining the control flow of the program
 - Heap: a memory segment dedicated to storing reference types like objects, strings and closures.
 
-## Streams
+## [Streams](https://nodejs.org/api/stream.html)
 
 ```bash
-$ node copy-file.js folder-1/song.mp3 folder-1/folder-2/song-copy.mp3
+$ node copy-file.js folder-1/helloworld.txt folder-1/folder-2/helloworld-copy.txt
 
-$ node copy-file-streaming.js folder-1/song.mp3 folder-1/folder-2/song-copy.mp3
+$ node copy-file-streaming.js folder-1/helloworld.txt folder-1/folder-2/helloworld-copy.txt
 ```
 
 ```bash
@@ -392,6 +399,14 @@ $ node copy-file-streaming.js folder-1/big-file.dat folder-1/folder-2/big-file-c
 
 $ node copy-file-stream-piping.js folder-1/big-file.dat folder-1/folder-2/big-file-copy.dat
 ```
+
+CHECK [Node.js Streams: Everything you need to know – freeCodeCamp](https://medium.freecodecamp.org/node-js-streams-everything-you-need-to-know-c9141306be93)
+
+PRACTICE [go on an educational stream adventure!](https://github.com/workshopper/stream-adventure)
+
+## References
+
+[What is the Windows equivalent of process.on('SIGINT') in node.js?](https://stackoverflow.com/questions/10021373/what-is-the-windows-equivalent-of-process-onsigint-in-node-js)
 
 
 
