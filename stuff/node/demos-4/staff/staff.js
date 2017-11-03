@@ -1,14 +1,14 @@
 let staff = [
 	'Enric Bertran',
 	'Gemma Casanovas',
-	'Kevin Palomino',
+	//'Kevin Palomino',
 	'Marc Recasens',
 	'Miguel Escolano',
 	'Pablo Mangione',
 	'Pau Sarobe',
-	'Ricardo Martinez',
+	//'Ricardo Martinez',
 	'Sergi Picazo',
-	'Soledad Lopez',
+	//'Soledad Lopez',
 	'Victor Malo'
 ]
 
