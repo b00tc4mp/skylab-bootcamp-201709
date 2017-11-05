@@ -1,4 +1,4 @@
-require('../arrays/array-shuffle-polyfill')
+require('../arrays/polyfills')
 
 class Staff {
 	constructor() {
@@ -6,7 +6,7 @@ class Staff {
 	}
 
 	randomize() {
-		return this.staff.shuffle()
+		return this.staff.clone().shuffle()
 	}
 }
 

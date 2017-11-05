@@ -1,0 +1,1 @@
+console.log('random staff...\n', new (require('./Staff'))().randomize().map(person => person.name))
