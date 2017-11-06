@@ -146,7 +146,7 @@ require('mongodb').MongoClient.connect('mongodb://localhost:27017/test', (err, d
 
     console.log('Starting Restaurants API...')
 
-    app.listen(process.env.PORT, () => console.log('Restaurants API is up'))
+    app.listen(process.env.PORT, () => console.log(`Restaurants API is up on port ${process.env.PORT}`))
 
     process.on('SIGINT', () => {
         console.log('\nStopping Restaurants API...')

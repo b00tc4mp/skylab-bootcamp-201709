@@ -81,13 +81,13 @@ class RestaurantsData {
             }, { restaurant_id: id }, 1, 1, undefined, undefined)
             .then(docs => {
                 return this._query(undefined, {
-                    "address.coord": {
+                    restaurant_id: { $ne: id },
+                    'address.coord': {
                         $near: {
                             $geometry: {
-                                type: "Point",
+                                type: 'Point',
                                 coordinates: docs[0].address.coord
                             },
-
                             $maxDistance: km * 1000
                         }
                     }
