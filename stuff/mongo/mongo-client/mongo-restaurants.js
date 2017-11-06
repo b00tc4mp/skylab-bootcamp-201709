@@ -17,7 +17,9 @@ MongoClient.connect(url, (err, db) => {
     // 	})
 
     // db.collection('restaurants')
-    // 	.find({ borough: 'Manhattan'}).toArray((err, data) => {
+    // 	.find({ borough: 'Manhattan'})
+    //     .limit(1)
+    //     .toArray((err, data) => {
     // 		console.log(data)
 
     // 		db.close()
@@ -25,12 +27,15 @@ MongoClient.connect(url, (err, db) => {
 
     // const cursor = db.collection('restaurants')
     // 	.find({ borough: 'Manhattan' })
+    //     // .limit(10)
 
     // cursor.each((err, item) => {
-    // 	if (item == null)
-    // 		db.close()
-    // 	else
+    //     if (err) throw err
+
+    // 	if (item != null)
     // 		console.log(item)
+    //     else
+    //         db.close()
     // })
 
     // const restaurantIds = []
@@ -50,6 +55,7 @@ MongoClient.connect(url, (err, db) => {
     // 	}
     // })
 
+    // const restaurantIds = []
 
     // const cursor = db.collection('restaurants')
     // 	.find({'address.zipcode': '10075'})
@@ -66,7 +72,7 @@ MongoClient.connect(url, (err, db) => {
     // 	}
     // })
 
-    const restaurants = []
+    // const restaurants = []
 
     // const cursor = db.collection('restaurants')
     // 	.find({'grades.grade': 'B'})
@@ -102,24 +108,41 @@ MongoClient.connect(url, (err, db) => {
     // 	}
     // })
 
-    db.collection('restaurants')
-    	.findOne({ name: 'Juni'}, (err, data) => {
-    		console.log(data)
+    // db.collection('restaurants')
+    // 	.findOne({ name: 'Juni'}, (err, data) => {
+    // 		console.log(data)
 
-    		db.close()
-    	})
+    // 		db.close()
+    // 	})
 
     // UPDATE
 
     // db.collection('restaurants')
     //     .updateOne({ "name": "Juni" }, {
-    //         $set: { "cuisine": "American (New)" },
+    //         $set: { "cuisine": "American" },
     //         $currentDate: { "lastModified": true }
     //     }, (err, results) => {
-    //         console.log(results);
+    //         console.log(results)
 
     //         db.close()
     //     })
+
+    db.collection('restaurants')
+        .updateOne({ "name": "Juni" }, {
+            $set: { "cuisine": "American (Old)" },
+            $currentDate: { "lastModified": true }
+        }, (err, results) => {
+            if (err) throw err
+                
+            db.collection('restaurants')
+                .findOne({ name: 'Juni'}, (err, data) => {
+                    if (err) throw err
+
+                    console.log(data)
+
+                    db.close()
+                })
+        })
 
     console.log('Hello, World!')
 })
