@@ -34,13 +34,21 @@ class RestaurantsData {
             throw new Error(`hide cannot be ${hide}`)
     }
 
-    _query(validate, conditions, page, limit, show, hide) {
+    _query(validate, conditions, page, limit, show, hide, single) {
         return new Promise((resolve, reject) => {
             if (validate) validate()
 
             this._validate(page, limit, show, hide)
 
-            this._db()
+            if (single)
+                this._db()
+                .findOne(conditions, this._projection(show, hide), (err, docs) => {
+                    if (err) return reject(err)
+
+                    resolve(docs)
+                })
+            else
+                this._db()
                 .find(conditions, this._projection(show, hide))
                 .skip((page - 1) * limit)
                 .limit(limit)
@@ -68,25 +76,25 @@ class RestaurantsData {
         }, { cuisine: not ? { $ne: cuisine } : cuisine }, page, limit, show, hide)
     }
 
-    listById(id, page, limit, show, hide) {
+    retrieveById(id, page, limit, show, hide) {
         return this._query(() => {
             if (!id) throw new Error(`id cannot be ${id}`)
-        }, { restaurant_id: id }, page, limit, show, hide)
+        }, { restaurant_id: id }, page, limit, show, hide, true)
     }
 
     listByIdAndProximity(id, km, page, limit, show, hide) {
         return this._query(() => {
                 if (!id) throw new Error(`id cannot be ${id}`)
                 if (!km) throw new Error(`km cannot be ${km}`)
-            }, { restaurant_id: id }, 1, 1, undefined, undefined)
-            .then(docs => {
+            }, { restaurant_id: id }, 1, 1, undefined, undefined, true)
+            .then(doc => {
                 return this._query(undefined, {
                     restaurant_id: { $ne: id },
                     'address.coord': {
                         $near: {
                             $geometry: {
                                 type: 'Point',
-                                coordinates: docs[0].address.coord
+                                coordinates: doc.address.coord
                             },
                             $maxDistance: km * 1000
                         }

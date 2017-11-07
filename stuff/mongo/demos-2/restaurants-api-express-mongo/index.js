@@ -102,11 +102,11 @@ router.route('/restaurants/:id')
         const { id } = req.params
         const { page, limit, show, hide } = req
 
-        restaurantsData.listById(id, page, limit, show, hide)
+        restaurantsData.retrieveById(id, page, limit, show, hide)
             .then(restaurants =>
                 res.json({
                     status: 'OK',
-                    message: 'restaurants listed by id successfully',
+                    message: 'restaurant retrieved by id successfully',
                     data: restaurants
                 }))
             .catch(err => {
