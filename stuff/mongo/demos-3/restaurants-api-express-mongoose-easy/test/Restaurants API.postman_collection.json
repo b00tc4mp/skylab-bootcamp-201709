@@ -1,0 +1,285 @@
+{
+	"info": {
+		"name": "Restaurants API",
+		"_postman_id": "71c66d71-ffb2-8171-0489-0dbe95f98d3c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurants?show=name,borough,cuisine,restaurant_id&hide=_id&page=1&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurants"
+					],
+					"query": [
+						{
+							"key": "show",
+							"value": "name,borough,cuisine,restaurant_id",
+							"equals": true
+						},
+						{
+							"key": "hide",
+							"value": "_id",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "limit",
+							"value": "3",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list by borough",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurants/borough/Manhattan?page=1&limit=2&show=address.street,grades&hide=_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurants",
+						"borough",
+						"Manhattan"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"equals": true
+						},
+						{
+							"key": "show",
+							"value": "address.street,grades",
+							"equals": true
+						},
+						{
+							"key": "hide",
+							"value": "_id",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list by cuisine",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurants/cuisine/Italian?show=name,borough,cuisine,restaurant_id&hide=_id&page=1&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurants",
+						"cuisine",
+						"Italian"
+					],
+					"query": [
+						{
+							"key": "show",
+							"value": "name,borough,cuisine,restaurant_id",
+							"equals": true
+						},
+						{
+							"key": "hide",
+							"value": "_id",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "limit",
+							"value": "3",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list by not cuisine",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurants/cuisine/not/Italian?show=name,borough,cuisine,restaurant_id&hide=_id&page=1&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurants",
+						"cuisine",
+						"not",
+						"Italian"
+					],
+					"query": [
+						{
+							"key": "show",
+							"value": "name,borough,cuisine,restaurant_id",
+							"equals": true
+						},
+						{
+							"key": "hide",
+							"value": "_id",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "limit",
+							"value": "3",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurants/30191841?show=name,borough,cuisine,restaurant_id&hide=_id&page=1&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurants",
+						"30191841"
+					],
+					"query": [
+						{
+							"key": "show",
+							"value": "name,borough,cuisine,restaurant_id",
+							"equals": true
+						},
+						{
+							"key": "hide",
+							"value": "_id",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "limit",
+							"value": "3",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list by id and proximity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/restaurants/30191841/around/1?show=name,borough,cuisine,restaurant_id&hide=_id&page=1&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"restaurants",
+						"30191841",
+						"around",
+						"1"
+					],
+					"query": [
+						{
+							"key": "show",
+							"value": "name,borough,cuisine,restaurant_id",
+							"equals": true
+						},
+						{
+							"key": "hide",
+							"value": "_id",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "limit",
+							"value": "3",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
