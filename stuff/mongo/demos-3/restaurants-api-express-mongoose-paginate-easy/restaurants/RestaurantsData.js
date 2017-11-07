@@ -1,4 +1,4 @@
-const Restaurant = require('./RestaurantModel')
+const Restaurant = restaurants = require('./RestaurantModel')
 
 class RestaurantsData {
     _projection(show, hide) {
@@ -31,13 +31,11 @@ class RestaurantsData {
         return new Promise((resolve, reject) => {
             this._validate(page, limit, show, hide)
 
-            const query = Restaurant.find()
-
-            query.select(this._projection(show, hide))
-            query.skip((page - 1) * limit)
-            query.limit(limit)
-
-            query.exec((err, docs) => {
+            Restaurant.paginate({}, {
+                select: this._projection(show, hide),
+                page,
+                limit
+            }, (err, docs) => {
                 if (err) return reject(err)
 
                 resolve(docs)
@@ -49,13 +47,11 @@ class RestaurantsData {
         return new Promise((resolve, reject) => {
             this._validate(page, limit, show, hide)
 
-            const query = Restaurant.find({ borough })
-
-            query.select(this._projection(show, hide))
-            query.skip((page - 1) * limit)
-            query.limit(limit)
-
-            query.exec((err, docs) => {
+            Restaurant.paginate({ borough }, {
+                select: this._projection(show, hide),
+                page,
+                limit
+            }, (err, docs) => {
                 if (err) return reject(err)
 
                 resolve(docs)
@@ -67,13 +63,11 @@ class RestaurantsData {
         return new Promise((resolve, reject) => {
             this._validate(page, limit, show, hide)
 
-            const query = Restaurant.find({ cuisine: not ? { $ne: cuisine } : cuisine })
-
-            query.select(this._projection(show, hide))
-            query.skip((page - 1) * limit)
-            query.limit(limit)
-
-            query.exec((err, docs) => {
+            Restaurant.paginate({ cuisine }, {
+                select: this._projection(show, hide),
+                page,
+                limit
+            }, (err, docs) => {
                 if (err) return reject(err)
 
                 resolve(docs)
@@ -114,7 +108,7 @@ class RestaurantsData {
                 return new Promise((resolve, reject) => {
                     const coords = doc.address.coord
 
-                    const query = Restaurant.find({
+                    Restaurant.paginate({
                         restaurant_id: { $ne: id },
                         'address.coord': {
                             $near: {
@@ -125,13 +119,11 @@ class RestaurantsData {
                                 $maxDistance: km * 1000
                             }
                         }
-                    })
-
-                    query.select(this._projection(show, hide))
-                    query.skip((page - 1) * limit)
-                    query.limit(limit)
-
-                    query.exec((err, docs) => {
+                    }, {
+                        select: this._projection(show, hide),
+                        page,
+                        limit
+                    }, (err, docs) => {
                         if (err) return reject(err)
 
                         resolve(docs)

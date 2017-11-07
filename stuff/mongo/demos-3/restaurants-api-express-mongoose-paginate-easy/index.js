@@ -106,7 +106,7 @@ router.route('/restaurants/:id')
             .then(restaurants =>
                 res.json({
                     status: 'OK',
-                    message: 'restaurant retrieved by id successfully',
+                    message: 'restaurants listed by id successfully',
                     data: restaurants
                 }))
             .catch(err => {
