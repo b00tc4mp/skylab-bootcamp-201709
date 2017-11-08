@@ -21,3 +21,7 @@ $ mongoimport -h <host>:<port> -d <database-name> -c <collection-name> -u <usern
 
 $ mongoexport -h <host>:<port> -d <database-name> -c <collection-name> -u <username> -p <password>  --jsonArray -o <json-array-file>
 ```
+
+## Hints
+
+[What is the “__v” field in MongoDB?](https://stackoverflow.com/questions/12495891/what-is-the-v-field-in-mongodb)

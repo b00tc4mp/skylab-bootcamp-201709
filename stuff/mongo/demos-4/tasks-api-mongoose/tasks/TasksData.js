@@ -1,4 +1,3 @@
-const fs = require('fs')
 const Task = require('./TaskModel')
 
 class TasksData {
@@ -23,61 +22,52 @@ class TasksData {
     }
 
     retrieve(id) {
-        if (!id)
-            throw new Error('no task id provided')
+        return new Promise((resolve, reject) => {
+            if (!id)
+                throw new Error('no task id provided')
 
-        const [task] = this.tasks.filter(task => task.id == id)
+            // callback way...
+            // Task.findById(id, (err, task) => {
+            //     if (err) return reject(err)
 
-        if (!task)
-            throw new Error(`no task found with id ${id}`)
+            //     resolve(task)
+            // })
 
-        return task
+            // Promise way...
+            Task.findById(id)
+                .then(resolve)
+                .catch(reject)
+        })
     }
 
     update(id, text, done) {
-        if (!id)
-            throw new Error('no task id provided')
+        return new Promise((resolve, reject) => {
+            if (!id)
+                throw new Error('no task id provided')
 
-        if (!text)
-            throw new Error('no task text provided')
+            if (!text)
+                throw new Error('no task text provided')
 
-        if (typeof done !== 'boolean')
-            throw new Error('task done is not boolean')
+            if (typeof done !== 'boolean')
+                throw new Error('task done is not boolean')
 
-        const [task] = this.tasks.filter(task => task.id == id)
-
-        if (!task)
-            throw new Error(`no task found with id ${id}`)
-
-        task.text = text
-        task.done = done
-
-        this.save()
-
-        return task
+            Task.update({ _id: id }, { text, done })
+                .then(() => Task.findById(id)
+                    .then(resolve))
+                .catch(reject)
+        })
     }
 
     delete(id) {
-        if (!id)
-            throw new Error('no task id provided')
+        return new Promise((resolve, reject) => {
+            if (!id)
+                throw new Error('no task id provided')
 
-        let task
-
-        for (let i = 0; i < this.tasks.length; i++) {
-            if ((task = this.tasks[i]).id == id) {
-                this.tasks.splice(i, 1)
-
-                break
-            } else if (i === this.tasks.length - 1)
-                task = undefined
-        }
-
-        if (!task)
-            throw new Error(`no task found with id ${id}`)
-
-        this.save()
-
-        return task
+            Task.findById(id)
+                .then(task => Task.remove({ _id: id })
+                    .then(() => resolve(task)))
+                .catch(reject)
+        })
     }
 }
 

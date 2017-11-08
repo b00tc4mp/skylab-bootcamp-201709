@@ -53,58 +53,51 @@ router.route('/tasks/:id')
     .get((req, res) => {
         const id = req.params.id
 
-        try {
-            const task = tasksData.retrieve(id)
-
-            res.json({
-                status: 'OK',
-                message: 'task retrieved successfully',
-                data: task
+        tasksData.retrieve(id)
+            .then(task => {
+                res.json({
+                    status: 'OK',
+                    message: 'task retrieved successfully',
+                    data: task
+                })
             })
-        } catch (err) {
-            res.json({
-                status: 'KO',
-                message: err.message
+            .catch(err => {
+                res.json({
+                    status: 'KO',
+                    message: err.message
+                })
             })
-        }
     })
     .put((req, res) => {
         const id = req.params.id
 
         const { text, done } = req.body
 
-        try {
-            const task = tasksData.update(id, text, done)
-
-            res.json({
+        tasksData.update(id, text, done)
+            .then(task => res.json({
                 status: 'OK',
                 message: 'task updated successfully',
                 data: task
-            })
-        } catch (err) {
-            res.json({
+            }))
+            .catch(err => res.json({
                 status: 'KO',
                 message: err.message
-            })
-        }
+            }))
     })
     .delete((req, res) => {
         const id = req.params.id
-
-        try {
-            const task = tasksData.delete(id)
-
-            res.json({
+        
+        tasksData.delete(id)
+            .then(task => res.json({
                 status: 'OK',
                 message: 'task deleted successfully',
                 data: task
-            })
-        } catch (err) {
-            res.json({
+            }))
+            .catch(err => res.json({
                 status: 'KO',
                 message: err.message
-            })
-        }
+            }))
+
     })
 
 app.use('/api', router)
