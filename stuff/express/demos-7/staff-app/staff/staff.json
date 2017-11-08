@@ -11,46 +11,36 @@
     },
     {
         "id": 2,
-        "name": "Kevin",
-        "surname": "Palomino"
-    },
-    {
-        "id": 3,
         "name": "Marc",
         "surname": "Recasens"
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Miguel",
         "surname": "Escolano"
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "Pablo",
         "surname": "Mangione"
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Pau",
         "surname": "Sarobe"
     },
     {
-        "id": 7,
+        "id": 6,
         "name": "Ricardo",
         "surname": "Martinez"
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "Sergi",
         "surname": "Picazo"
     },
     {
-        "id": 9,
-        "name": "Soledad",
-        "surname": "Lopez"
-    },
-    {
-        "id": 10,
+        "id": 8,
         "name": "Victor",
         "surname": "Malo"
     }
