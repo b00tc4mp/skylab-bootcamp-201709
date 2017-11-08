@@ -1,4 +1,4 @@
-const Restaurant = restaurants = require('./RestaurantModel')
+const Restaurant = require('./RestaurantModel')
 
 class RestaurantsData {
     _projection(show, hide) {
