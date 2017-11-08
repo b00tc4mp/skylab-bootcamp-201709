@@ -2,34 +2,24 @@ const fs = require('fs')
 const Task = require('./TaskModel')
 
 class TasksData {
-    constructor() {
-        this.file = require('path').join(__dirname, 'tasks.json')
-
-        this.tasks = require('./tasks.json') //JSON.parse(fs.readFileSync(this.file))
-    }
-
-    save() {
-        fs.writeFileSync(this.file, JSON.stringify(this.tasks, null, 4))
-    }
-
     create(text, done) {
-        if(!text)
-            throw new Error('no task text provided')
+        return new Promise((resolve, reject) => {
+            if (!text)
+                throw new Error('no task text provided')
 
-        if(typeof done !== 'boolean')
-            throw new Error('task done is not boolean')
+            if (typeof done !== 'boolean')
+                throw new Error('task done is not boolean')
 
-        const task = { id: new Date().getTime(), text, done }
+            const task = new Task({ text, done })
 
-        this.tasks.push(task)
-
-        this.save()
-
-        return task
+            task.save()
+                .then(resolve)
+                .catch(reject)
+        })
     }
 
     list() {
-        return this.tasks
+        return Task.find()
     }
 
     retrieve(id) {
@@ -42,16 +32,16 @@ class TasksData {
             throw new Error(`no task found with id ${id}`)
 
         return task
-    }    
+    }
 
     update(id, text, done) {
         if (!id)
             throw new Error('no task id provided')
 
-        if(!text)
+        if (!text)
             throw new Error('no task text provided')
 
-        if(typeof done !== 'boolean')
+        if (typeof done !== 'boolean')
             throw new Error('task done is not boolean')
 
         const [task] = this.tasks.filter(task => task.id == id)

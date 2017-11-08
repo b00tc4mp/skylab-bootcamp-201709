@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const Restaurant = new Schema({
+const RestaurantSchema = new Schema({
 	restaurant_id: String,
 	name: String,
 	borough: String,
@@ -19,4 +19,4 @@ const Restaurant = new Schema({
 	}]
 })
 
-module.exports = mongoose.model('Restaurant', Restaurant)
+module.exports = mongoose.model('Restaurant', RestaurantSchema)

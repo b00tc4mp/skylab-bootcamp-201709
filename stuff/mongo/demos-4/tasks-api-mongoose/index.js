@@ -15,29 +15,38 @@ const router = express.Router()
 
 router.route('/tasks')
     .get((req, res) => {
-        res.json({
-            status: 'OK',
-            message: 'tasks listed successfully',
-            data: tasksData.list()
-        })
+        tasksData.list()
+            .then(tasks => {
+                res.json({
+                    status: 'OK',
+                    message: 'tasks listed successfully',
+                    data: tasks
+                })
+            })
+            .catch(err => {
+                res.json({
+                    status: 'KO',
+                    message: err.message
+                })
+            })
     })
     .post((req, res) => {
         const { text, done } = req.body
 
-        try {
-            const task = tasksData.create(text, done)
-
-            res.json({
-                status: 'OK',
-                message: 'task created successfully',
-                data: task
+        tasksData.create(text, done)
+            .then(task => {
+                res.json({
+                    status: 'OK',
+                    message: 'task created successfully',
+                    data: task
+                })
             })
-        } catch (err) {
-            res.json({
-                status: 'KO',
-                message: err.message
+            .catch(err => {
+                res.json({
+                    status: 'KO',
+                    message: err.message
+                })
             })
-        }
     })
 
 router.route('/tasks/:id')
@@ -100,12 +109,18 @@ router.route('/tasks/:id')
 
 app.use('/api', router)
 
-console.log(`starting Tasks API on port ${process.env.PORT}`)
+console.log(`Connecting Tasks API db on url ${process.env.DB_URL}`)
+
+const mongoose = require('mongoose')
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.DB_URL, { useMongoClient: true })
+
+console.log(`Starting Tasks API on port ${process.env.PORT}`)
 
 app.listen(process.env.PORT, () => console.log('Tasks API is up'))
 
 process.on('SIGINT', () => {
-    console.log('\nstopping Tasks API...')
+    console.log('\nStopping Tasks API...')
 
     process.exit()
 })
