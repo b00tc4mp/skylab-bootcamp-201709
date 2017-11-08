@@ -9,7 +9,7 @@ app.use((req, res, proceed) => {
 
 	let apikey
 
-	if (auth && ((apikey = auth.split(' ')).length === 2) && apikey[0] === 'APIKEY' && apikey[1] === '123')
+	if (auth && ((apikey = auth.split(' ')).length === 2) && apikey[0] === 'APIKEY' && apikey[1] === process.env.API_KEY)
 		proceed()
 	else 
 		res.json({
