@@ -1,6 +1,12 @@
 const Task = require('./TaskModel')
 
-class TasksData {
+class TaskData {
+    _normalize(task) {
+        const { _id, text, done } = task
+
+        return { id: _id, text, done }
+    }
+
     create(text, done) {
         return new Promise((resolve, reject) => {
             if (!text)
@@ -12,13 +18,14 @@ class TasksData {
             const task = new Task({ text, done })
 
             task.save()
-                .then(resolve)
+                .then(task => resolve(this._normalize(task)))
                 .catch(reject)
         })
     }
 
     list() {
         return Task.find()
+            .then(tasks => tasks.map(task => this._normalize(task)))
     }
 
     retrieve(id) {
@@ -35,7 +42,7 @@ class TasksData {
 
             // Promise way...
             Task.findById(id)
-                .then(resolve)
+                .then(task => resolve(this._normalize(task)))
                 .catch(reject)
         })
     }
@@ -53,7 +60,7 @@ class TasksData {
 
             Task.update({ _id: id }, { text, done })
                 .then(() => Task.findById(id)
-                    .then(resolve))
+                    .then(task => resolve(this._normalize(task))))
                 .catch(reject)
         })
     }
@@ -65,10 +72,10 @@ class TasksData {
 
             Task.findById(id)
                 .then(task => Task.remove({ _id: id })
-                    .then(() => resolve(task)))
+                    .then(() => resolve(this._normalize(task))))
                 .catch(reject)
         })
     }
 }
 
-module.exports = TasksData
+module.exports = TaskData

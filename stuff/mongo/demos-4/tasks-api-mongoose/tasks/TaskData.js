@@ -1,6 +1,6 @@
 const Task = require('./TaskModel')
 
-class TasksData {
+class TaskData {
     _normalize(task) {
         const { _id, text, done } = task
 
@@ -78,4 +78,4 @@ class TasksData {
     }
 }
 
-module.exports = TasksData
+module.exports = TaskData
