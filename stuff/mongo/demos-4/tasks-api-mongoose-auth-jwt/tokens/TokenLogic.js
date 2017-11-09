@@ -11,16 +11,19 @@ class TokenLogic {
             if (!token)
                 throw new Error(`token cannot be ${token}`)
 
+            if (!message)
+                throw new Error(`message cannot be ${message}`)
+
             tokenData.retrieve(token)
                 .then(_token => {
                 	if (_token.expiration < new Date().getTime())
                 		throw new Error(`token ${token} expired at time ${new Date(_token.expiration)}`)
 
-                    jwt.verify(token, this.secret, (err, decoded) => {
+                    jwt.verify(token, this.secret, (err, payload) => {
                         if (err) return reject(err)
 
-                        if (decoded.message !== message)
-                            throw new Error(`token message cannot be ${decoded.message}`)
+                        if (payload.message !== message)
+                            throw new Error(`token message cannot be ${payload.message}`)
 
                         resolve(true)
                     })

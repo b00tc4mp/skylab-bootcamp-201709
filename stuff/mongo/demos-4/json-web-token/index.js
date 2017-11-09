@@ -12,11 +12,11 @@ const jwt = require('jsonwebtoken')
 
 // 2
 
-const token = jwt.sign({ message: 'Hello, World!' }, 'a-secret-text', { expiresIn: 2 })
+const token = jwt.sign({ message: 'Hello, World!' }, 'a-secret-text', { expiresIn: 1 })
 
 console.log(token)
 
-const verifyOn = 500 // ms
+const verifyOn = 1500 // ms
 
 setTimeout(() => {
 	const decoded = jwt.verify(token, 'a-secret-text')

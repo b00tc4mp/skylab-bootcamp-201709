@@ -13,8 +13,6 @@ const jwt = require('jsonwebtoken')
 const tokenLogic = new(require('./tokens/TokenLogic'))(process.env.SECRET_KEY)
 
 app.use((req, res, proceed) => {
-    const method = req.method
-
     const auth = req.get('authorization') // TOKEN <adsfasdfasfas...>
 
     let token
