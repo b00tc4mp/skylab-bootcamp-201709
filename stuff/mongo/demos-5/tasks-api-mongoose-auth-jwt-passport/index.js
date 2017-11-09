@@ -1,7 +1,8 @@
 require('dotenv').config()
 
-const express = require('express')
+require('./mongoose')(process.env.DB_URL)
 
+const express = require('express')
 const app = express()
 
 app.use(require('./cors'))
@@ -9,13 +10,55 @@ app.use(require('./cors'))
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
+app.use(require('./passport')(process.env.SECRET))
+
+const passport = require('passport')
+const jwt = require('jsonwebtoken')
+const User = require('./users/UserModel')
+
+const auth = express.Router()
+
+auth.post('/register', (req, res) => {
+    const { username, password } = req.body
+
+    const user = new User({ username })
+
+    User.register(user, password, err => {
+        if (err) return res.json({
+            status: 'KO',
+            message: err.message
+        })
+
+        res.json({
+            status: 'OK',
+            message: 'user registered successfully'
+        })
+    })
+})
+
+auth.post('/login', passport.authenticate('local', { session: false }), (req, res) => {
+    const { _id: id, username } = req.user
+
+    const token = jwt.sign({ id, username }, process.env.SECRET)
+
+    res.json({
+        status: 'OK',
+        message: 'user authenticated successfully',
+        data: token
+    })
+})
+
+app.use('/auth', auth)
+
 const taskData = new(require('./tasks/TaskData'))
 
-const router = express.Router()
+const api = express.Router()
 
-router.route('/tasks')
+api.use(passport.authenticate('jwt', { session: false }))
+
+api.route('/tasks')
     .get((req, res) => {
-        taskData.list()
+        taskData.list(req.user.id)
             .then(tasks => {
                 res.json({
                     status: 'OK',
@@ -33,7 +76,7 @@ router.route('/tasks')
     .post((req, res) => {
         const { text, done } = req.body
 
-        taskData.create(text, done)
+        taskData.create(text, done, req.user.id)
             .then(task => {
                 res.json({
                     status: 'OK',
@@ -49,11 +92,11 @@ router.route('/tasks')
             })
     })
 
-router.route('/tasks/:id')
+api.route('/tasks/:id')
     .get((req, res) => {
         const id = req.params.id
 
-        taskData.retrieve(id)
+        taskData.retrieve(id, req.user.id)
             .then(task => {
                 res.json({
                     status: 'OK',
@@ -73,7 +116,7 @@ router.route('/tasks/:id')
 
         const { text, done } = req.body
 
-        taskData.update(id, text, done)
+        taskData.update(id, text, done, req.user.id)
             .then(task => res.json({
                 status: 'OK',
                 message: 'task updated successfully',
@@ -87,7 +130,7 @@ router.route('/tasks/:id')
     .delete((req, res) => {
         const id = req.params.id
         
-        taskData.delete(id)
+        taskData.delete(id, req.user.id)
             .then(task => res.json({
                 status: 'OK',
                 message: 'task deleted successfully',
@@ -100,17 +143,11 @@ router.route('/tasks/:id')
 
     })
 
-app.use('/api', router)
+app.use('/api', api)
 
-console.log(`Connecting Tasks API db on url ${process.env.DB_URL}`)
+console.log('Starting Tasks API...')
 
-const mongoose = require('mongoose')
-mongoose.Promise = global.Promise
-mongoose.connect(process.env.DB_URL, { useMongoClient: true })
-
-console.log(`Starting Tasks API on port ${process.env.PORT}`)
-
-app.listen(process.env.PORT, () => console.log('Tasks API is up'))
+app.listen(process.env.PORT, () => console.log(`Tasks API is up on port ${process.env.PORT}`))
 
 process.on('SIGINT', () => {
     console.log('\nStopping Tasks API...')
