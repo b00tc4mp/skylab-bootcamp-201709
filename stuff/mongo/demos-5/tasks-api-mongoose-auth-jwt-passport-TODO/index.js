@@ -9,13 +9,13 @@ app.use(require('./cors'))
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
-const tasksData = new(require('./tasks/TasksData'))
+const taskData = new(require('./tasks/TaskData'))
 
 const router = express.Router()
 
 router.route('/tasks')
     .get((req, res) => {
-        tasksData.list()
+        taskData.list()
             .then(tasks => {
                 res.json({
                     status: 'OK',
@@ -33,7 +33,7 @@ router.route('/tasks')
     .post((req, res) => {
         const { text, done } = req.body
 
-        tasksData.create(text, done)
+        taskData.create(text, done)
             .then(task => {
                 res.json({
                     status: 'OK',
@@ -53,7 +53,7 @@ router.route('/tasks/:id')
     .get((req, res) => {
         const id = req.params.id
 
-        tasksData.retrieve(id)
+        taskData.retrieve(id)
             .then(task => {
                 res.json({
                     status: 'OK',
@@ -73,7 +73,7 @@ router.route('/tasks/:id')
 
         const { text, done } = req.body
 
-        tasksData.update(id, text, done)
+        taskData.update(id, text, done)
             .then(task => res.json({
                 status: 'OK',
                 message: 'task updated successfully',
@@ -87,7 +87,7 @@ router.route('/tasks/:id')
     .delete((req, res) => {
         const id = req.params.id
         
-        tasksData.delete(id)
+        taskData.delete(id)
             .then(task => res.json({
                 status: 'OK',
                 message: 'task deleted successfully',

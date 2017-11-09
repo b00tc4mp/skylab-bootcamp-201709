@@ -10,10 +10,10 @@ class TaskData {
     create(text, done) {
         return new Promise((resolve, reject) => {
             if (!text)
-                throw new Error('no task text provided')
+                throw new Error(`text cannot be ${text}`)
 
             if (typeof done !== 'boolean')
-                throw new Error('task done is not boolean')
+                throw new Error(`done cannot be ${done}`)
 
             const task = new Task({ text, done })
 
@@ -31,7 +31,7 @@ class TaskData {
     retrieve(id) {
         return new Promise((resolve, reject) => {
             if (!id)
-                throw new Error('no task id provided')
+                throw new Error(`id cannot be ${id}`)
 
             // callback way...
             // Task.findById(id, (err, task) => {
@@ -50,13 +50,13 @@ class TaskData {
     update(id, text, done) {
         return new Promise((resolve, reject) => {
             if (!id)
-                throw new Error('no task id provided')
+                throw new Error(`id cannot be ${id}`)
 
             if (!text)
-                throw new Error('no task text provided')
+                throw new Error(`text cannot be ${text}`)
 
             if (typeof done !== 'boolean')
-                throw new Error('task done is not boolean')
+                throw new Error(`done cannot be ${done}`)
 
             Task.update({ _id: id }, { text, done })
                 .then(() => Task.findById(id)
@@ -68,7 +68,7 @@ class TaskData {
     delete(id) {
         return new Promise((resolve, reject) => {
             if (!id)
-                throw new Error('no task id provided')
+                throw new Error(`id cannot be ${id}`)
 
             Task.findById(id)
                 .then(task => Task.remove({ _id: id })
