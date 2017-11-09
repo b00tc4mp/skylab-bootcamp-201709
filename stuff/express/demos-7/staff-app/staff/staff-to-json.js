@@ -1,7 +1,7 @@
 let staff = [
 	'Enric Bertran',
 	'Gemma Casanovas',
-	//'Kevin Palomino',
+	'Kevin Palomino',
 	'Marc Recasens',
 	'Miguel Escolano',
 	'Pablo Mangione',
