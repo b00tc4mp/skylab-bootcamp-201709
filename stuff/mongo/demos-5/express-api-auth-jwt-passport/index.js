@@ -53,10 +53,13 @@ const api = express.Router()
 api.use(passport.authenticate('jwt', { session: false }))
 
 api.route('/helloworld')
-    .get((req, res) => res.json({ 
-        status: 'OK',
-        message: 'Hello, World!'
-    }))
+    .get((req, res) => {
+        const { id, username } = req.user
+        res.json({
+            status: 'OK',
+            message: `Welcome to your protected API, user ${JSON.stringify({id, username})}!`
+        })
+    })
 
 app.use('/api', api)
 
