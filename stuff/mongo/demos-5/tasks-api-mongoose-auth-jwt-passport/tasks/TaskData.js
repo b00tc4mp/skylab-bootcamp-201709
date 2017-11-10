@@ -27,6 +27,9 @@ class TaskData {
     }
 
     list(user) {
+        if (!user)
+                throw new Error(`user cannot be ${user}`)
+
         return Task.find({ user })
             .then(tasks => tasks.map(task => this._normalize(task)))
     }
@@ -39,8 +42,8 @@ class TaskData {
             if (!user)
                 throw new Error(`user cannot be ${user}`)
 
-            Task.find({ _id: id, user })
-                .then(([task]) => resolve(this._normalize(task)))
+            Task.findOne({ _id: id, user })
+                .then(task => resolve(this._normalize(task)))
                 .catch(reject)
         })
     }
