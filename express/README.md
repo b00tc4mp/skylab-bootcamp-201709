@@ -16,3 +16,6 @@
 
 ![Express with sessions](images/express-sessions.jpg)
 
+[WebSocket and Socket.IO](https://davidwalsh.name/websocket)
+
+[Optimize Your App with HTTP/2 Server Push Using Node and Express](https://webapplog.com/http2-server-push-node-express/)

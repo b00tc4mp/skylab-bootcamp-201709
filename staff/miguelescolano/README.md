@@ -1,1 +1,0 @@
-![Micheloncio](images/micheloncio.gif)
