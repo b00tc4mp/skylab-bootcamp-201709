@@ -1,0 +1,15 @@
+{
+  "title": "Passport \"Simple, unobtrusive authentication for Node.js\"",
+  "tags": [
+    "passport",
+    "js",
+    "node",
+    "authentication",
+    "login",
+    "authorization",
+    "jwt",
+    "security",
+    "access-control"
+  ],
+  "created": "2017-12-01T00:55:26.015Z"
+}

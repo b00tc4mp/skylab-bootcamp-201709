@@ -186,3 +186,9 @@ fun();
 # Jasmine
 
 [Introduction](https://jasmine.github.io/2.0/introduction.html)
+
+# References
+
+[Quick and dirty tricks for debugging Javascript](https://hackernoon.com/quick-and-dirty-tricks-for-debugging-javascript-d0e911c3afa)
+
+[News From the Community](https://www.javascript.com/news)

@@ -408,5 +408,9 @@ PRACTICE [go on an educational stream adventure!](https://github.com/workshopper
 
 [What is the Windows equivalent of process.on('SIGINT') in node.js?](https://stackoverflow.com/questions/10021373/what-is-the-windows-equivalent-of-process-onsigint-in-node-js)
 
+[How do I prompt users for input from a command-line script?](https://docs.nodejitsu.com/articles/command-line/how-to-prompt-for-command-line-input/)
+
+[Mastering the Node.js CLI & Command Line Options](https://blog.risingstack.com/mastering-the-node-js-cli-command-line-options/)
+
 
 

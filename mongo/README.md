@@ -2,10 +2,6 @@
 
 ## Data Import / Export
 
-```bash
-$ mongoimport --db <database-name> --collection <collection-name> --drop --file <pseudo-json-data-file-path>
-```
-
 ### From / to a json array file and a local server
 
 ```bash
