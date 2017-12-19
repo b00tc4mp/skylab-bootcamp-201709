@@ -1,0 +1,13 @@
+{
+  "title": "An example of how to use modules in React",
+  "tags": [
+    "react",
+    "module",
+    "node",
+    "requirejs",
+    "js",
+    "commonjs"
+  ],
+  "created": "2017-12-01T01:06:07.281Z",
+  "modified": "2017-12-01T01:07:45.480Z"
+}
