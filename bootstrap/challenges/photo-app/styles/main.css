@@ -1,16 +1,58 @@
-.banner {
-  background-image: url(../images/site_showcase_bg.jpg); }
-
-.white {
+/* Rules for index.html */
+.pagehead {
+  background-image: url("../images/site_showcase_bg.jpg") !important;
+  padding-bottom: 0px;
   color: white; }
+  .pagehead h1 {
+    padding-left: 3%; }
+  .pagehead h1 span {
+    color: #1CAA98; }
+  .pagehead .phead {
+    padding-left: 4%; }
+  .pagehead .box1 {
+    padding-top: 90px; }
 
-.green {
-  color: #04b486; }
+.pagebottom {
+  background: #1CAA98; }
+  .pagebottom li {
+    color: white;
+    font-weight: bold;
+    list-style-type: none;
+    padding-top: 3%; }
 
-@media (max-width: 768px) {
-  .center-block-xs {
-    display: block;
-    margin-right: auto;
-    margin-left: auto; } }
+.bottomleft {
+  padding-left: 18%; }
+
+.featurestitle {
+  color: white;
+  font-weight: bold; }
+
+.bottomimage {
+  padding-left: 10%; }
+
+.pagefooter {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background: black;
+  color: white; }
+  .pagefooter ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 2%; }
+  .pagefooter ul li a {
+    color: white; }
+  .pagefooter .copyr {
+    padding-left: 28%; }
+
+/*Rules about.html */
+.abouttitle {
+  background: #1CAA98;
+  display: block;
+  padding-top: 50px; }
+  .abouttitle > h2 {
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 5%;
+    font-size: 30px; }
 
 /*# sourceMappingURL=main.css.map */
