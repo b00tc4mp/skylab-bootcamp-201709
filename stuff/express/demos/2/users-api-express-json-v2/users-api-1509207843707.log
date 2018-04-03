@@ -1,3 +1,0 @@
-INFO Sat Oct 28 2017 18:24:13 GMT+0200 (CEST) Users API: Request from IP ::1 to create a user {"username":"peter","password":123}
-DEBUG Sat Oct 28 2017 18:24:13 GMT+0200 (CEST) Users API: Request from IP ::1 to create a user {"username":"peter","password":123,"id":1509207853937} successfully
-INFO Sat Oct 28 2017 18:24:25 GMT+0200 (CEST) Users API: Request from IP ::1 to list users

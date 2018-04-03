@@ -1,5 +1,0 @@
-INFO Mon Oct 30 2017 17:04:19 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
-INFO Mon Oct 30 2017 17:04:30 GMT+0100 (CET) Users API: request from IP ::1 to search users matching query "j" succeeded
-INFO Mon Oct 30 2017 17:04:42 GMT+0100 (CET) Users API: request from IP ::1 to search users matching query "s" succeeded
-INFO Mon Oct 30 2017 17:04:51 GMT+0100 (CET) Users API: request from IP ::1 to search users matching query "p" succeeded
-INFO Mon Oct 30 2017 17:05:01 GMT+0100 (CET) Users API: request from IP ::1 to search users matching query "m" succeeded

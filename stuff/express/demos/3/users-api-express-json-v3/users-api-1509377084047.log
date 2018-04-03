@@ -1,5 +1,0 @@
-INFO Mon Oct 30 2017 16:25:08 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
-INFO Mon Oct 30 2017 16:25:11 GMT+0100 (CET) Users API: request from IP ::1 to create a user jack succeeded
-INFO Mon Oct 30 2017 16:25:13 GMT+0100 (CET) Users API: request from IP ::1 to list all users succeeded
-WARN Mon Oct 30 2017 16:25:40 GMT+0100 (CET) Users API: Request from IP ::1 to update user with 1509376807130, but no user found with id 1509376807130
-WARN Mon Oct 30 2017 16:28:11 GMT+0100 (CET) Users API: Request from IP ::1 to update user with 1509377111032, but no user found with id 1509377111032
